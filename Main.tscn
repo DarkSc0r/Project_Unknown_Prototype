@@ -118,6 +118,7 @@ script = ExtResource("2_cm0pq")
 
 [node name="Player" parent="." unique_id=2114966383 instance=ExtResource("2_r0du0")]
 position = Vector2(17, -2)
+speed = 100
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1523229866]
 zoom = Vector2(2.5, 2.5)

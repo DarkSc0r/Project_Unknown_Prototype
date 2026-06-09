@@ -1,11 +1,13 @@
 extends Node2D
 
 var map_width := 256
-var map_height := 128
+var map_length := 128
+var map_height := 4
 var noise_scale := 0.1
 
 # personal challenge || create this with a dictionary
-var grass_threshold := 0.475
+var green_tile_threshold := 0.475
+var white_tile_threshold := 0.45
 
 @onready var tilemap: TileMapLayer = $TileMapLayer
 
@@ -18,17 +20,20 @@ func generate_map():
 	tilemap.clear()
 
 	for x in range(map_width):
-		for y in range(map_height):
-			var noise_value := noise.get_noise_2d(x, y)
-			noise_value = (noise_value + 1) / 2
+		for z in range(map_length):
+			for y in range(map_height):
+				var noise_value := noise.get_noise_3d(x, y, z)
+				noise_value = (noise_value + 1) / 2
 
-			var tile_pos := Vector2i(x, y)			
-			var atlas_coords := Vector2i(0, 0)
+				var tile_pos := Vector2i(x, z)			
+				var atlas_coords := Vector2i(0, 0)
 
-			if noise_value < grass_threshold:
-				atlas_coords = Vector2i(0, 0)
+				if noise_value < white_tile_threshold:
+					atlas_coords = Vector2i(0, 0)
+				elif noise_value < green_tile_threshold:
+					atlas_coords = Vector2i(0,3)
 
-			tilemap.set_cell(tile_pos, 1, atlas_coords)
+				tilemap.set_cell(tile_pos, 1, atlas_coords)
 
 func _ready():
 	generate_map()
