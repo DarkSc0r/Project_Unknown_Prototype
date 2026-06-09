@@ -1,5 +1,6 @@
-[gd_scene format=4 uid="uid://d074s7in10q0e"]
+[gd_scene format=3 uid="uid://d074s7in10q0e"]
 
+[ext_resource type="Script" uid="uid://b7dscle4m4mmj" path="res://perlin_noise_generator.gd" id="1_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://tiles/isometric-sandbox-sheet.png" id="1_uu6xs"]
 [ext_resource type="Script" uid="uid://dlso2re86jubw" path="res://tile_map_layer.gd" id="2_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://41d1tooi88jf" path="res://player.tscn" id="2_r0du0"]
@@ -71,7 +72,6 @@ texture_region_size = Vector2i(32, 32)
 5:5/0 = 0
 0:6/0 = 0
 0:6/0/texture_origin = Vector2i(0, -8)
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
 1:6/0 = 0
 2:6/0 = 0
 2:6/0/texture_origin = Vector2i(0, -8)
@@ -107,10 +107,12 @@ sources/1 = SubResource("TileSetAtlasSource_cm0pq")
 
 [node name="Node2D" type="Node2D" unique_id=2076801899]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1620522825]
+[node name="PerlinNoiseGenerator" type="Node2D" parent="." unique_id=920951827]
+script = ExtResource("1_cm0pq")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PerlinNoiseGenerator" unique_id=1620522825]
 y_sort_enabled = true
 texture_filter = 1
-tile_map_data = PackedByteArray("AAD//wAAAQAAAAAAAAD+////AQAAAAAAAAD///7/AQAAAAAAAAD///3/AQAAAAAAAAAAAPz/AQAAAAAAAAAAAP3/AQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAD//wEAAQAAAAAAAAD/////AQAAAAAAAAABAP7/AQAAAAAAAAABAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAD//wIAAQAAAAAAAAD+//7/AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD//wMAAQAAAAAAAAD9////AQAAAAAAAAD+//3/AQAAAAAAAAD///z/AQAAAAAAAAD///v/AQAAAAAAAAAAAPv/AQAAAAAAAAABAPz/AQAAAAAAAAABAP//AQAAAAAAAAACAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAP3/AQAAAAAAAAACAP7/AQAAAAAAAAACAP//AQAAAAAAAAABAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAD9//z/AQAAAAMAAAD9//v/AQAAAAMAAAD+//r/AQAAAAMAAAD+//n/AQAAAAMAAAD///j/AQAAAAMAAAD///f/AQAAAAMAAAAAAPb/AQAAAAMAAAAAAPf/AQAAAAMAAAABAPj/AQAAAAMAAAABAPn/AQAAAAMAAAACAPr/AQAAAAMAAAACAPv/AQAAAAMAAAADAPz/AQAAAAMAAAACAP3/AQADAAAAAAACAPz/AQADAAAAAAABAPv/AQADAAAAAAABAPr/AQADAAAAAAAAAPn/AQADAAAAAAD///n/AQACAAAAAAD///r/AQACAAAAAAD+//v/AQACAAAAAAD+//z/AQACAAAAAAD9//3/AQACAAAAAAAAAPj/AQAAAAYAAAA=")
 tile_set = SubResource("TileSet_fos0i")
 script = ExtResource("2_cm0pq")
 
