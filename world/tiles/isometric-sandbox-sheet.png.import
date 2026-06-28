@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1xijjuq342mh"
-path="res://.godot/imported/isometric-sandbox-sheet.png-7c942667034dbe2625fcc054b536296b.ctex"
+path="res://.godot/imported/isometric-sandbox-sheet.png-aa2746498de148a46923499415ff67fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/isometric-sandbox-sheet.png"
-dest_files=["res://.godot/imported/isometric-sandbox-sheet.png-7c942667034dbe2625fcc054b536296b.ctex"]
+source_file="res://world/tiles/isometric-sandbox-sheet.png"
+dest_files=["res://.godot/imported/isometric-sandbox-sheet.png-aa2746498de148a46923499415ff67fb.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d074s7in10q0e"]
 
-[ext_resource type="Script" uid="uid://b7dscle4m4mmj" path="res://perlin_noise_generator.gd" id="1_cm0pq"]
-[ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://tiles/isometric-sandbox-sheet.png" id="1_uu6xs"]
-[ext_resource type="Script" uid="uid://dlso2re86jubw" path="res://tile_map_layer.gd" id="2_cm0pq"]
-[ext_resource type="PackedScene" uid="uid://41d1tooi88jf" path="res://player.tscn" id="2_r0du0"]
+[ext_resource type="Script" uid="uid://b7dscle4m4mmj" path="res://world/perlin_noise_generator.gd" id="1_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://world/tiles/isometric-sandbox-sheet.png" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://dlso2re86jubw" path="res://world/tile_map_layer.gd" id="2_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://41d1tooi88jf" path="res://character/player.tscn" id="2_r0du0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
 texture = ExtResource("1_uu6xs")

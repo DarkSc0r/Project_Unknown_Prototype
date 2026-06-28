@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://bgk0wiykm6evn"]
+
+[ext_resource type="Script" uid="uid://dlcdou3vj1xmf" path="res://ui/main_menu.gd" id="1_m625n"]
+[ext_resource type="Script" uid="uid://cn33xiy3fvcrc" path="res://ui/new_game.gd" id="2_1h2mr"]
+[ext_resource type="Script" uid="uid://dxdq71rj1jsyt" path="res://ui/options.gd" id="2_wugcc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtjmy"]
+font_size = 64
+
+[node name="Control" type="Control" unique_id=1237799054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m625n")
+
+[node name="FPS" type="Label" parent="." unique_id=813356383]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Title" type="Label" parent="." unique_id=130127121]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 180.0
+grow_horizontal = 2
+text = "Main Menu"
+label_settings = SubResource("LabelSettings_wtjmy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2082878522]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 180
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=811130262]
+layout_mode = 2
+
+[node name="LeftSidePanel" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1007015665]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="NewGamePanel" type="Control" parent="MarginContainer/HBoxContainer/LeftSidePanel" unique_id=685831577]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+script = ExtResource("2_1h2mr")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel" unique_id=1236634526]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="NewGameSection" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer" unique_id=740136191]
+layout_mode = 2
+
+[node name="SaveTitleGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=292441815]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/SaveTitleGroup" unique_id=108046632]
+layout_mode = 2
+text = "Save Title"
+
+[node name="NewGameTitle" type="LineEdit" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/SaveTitleGroup" unique_id=1205708244]
+layout_mode = 2
+
+[node name="SeedGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=1183787699]
+layout_mode = 2
+
+[node name="SeedLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/SeedGroup" unique_id=1203319187]
+layout_mode = 2
+text = "Seed"
+
+[node name="NewGameSeed" type="LineEdit" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/SeedGroup" unique_id=1734207337]
+layout_mode = 2
+
+[node name="DifficultyGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=1936707910]
+layout_mode = 2
+
+[node name="DifficultyLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/DifficultyGroup" unique_id=1016863054]
+layout_mode = 2
+text = "Difficulty"
+
+[node name="NewGameDifficultySelection" type="OptionButton" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/DifficultyGroup" unique_id=470902289]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Normal"
+popup/item_0/id = 0
+popup/item_1/text = "Challenger"
+popup/item_1/id = 1
+
+[node name="CreateWorldButton" type="Button" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=370242592]
+layout_mode = 2
+
+[node name="OptionsPanel" type="Control" parent="MarginContainer/HBoxContainer/LeftSidePanel" unique_id=1050494870]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+script = ExtResource("2_wugcc")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel" unique_id=857760945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="OptionsSection" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer" unique_id=1773487491]
+layout_mode = 2
+
+[node name="FullscreenGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=534386571]
+layout_mode = 2
+
+[node name="FullscreenLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FullscreenGroup" unique_id=1401491422]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="FullScreenCheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FullscreenGroup" unique_id=1677254517]
+layout_mode = 2
+button_pressed = true
+
+[node name="ResolutionGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=1480786583]
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/ResolutionGroup" unique_id=1225356013]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOptions" type="OptionButton" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/ResolutionGroup" unique_id=1134085736]
+layout_mode = 2
+
+[node name="VSyncGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=1493679591]
+layout_mode = 2
+
+[node name="VSyncLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/VSyncGroup" unique_id=1247187720]
+layout_mode = 2
+text = "VSync"
+
+[node name="VSyncCheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/VSyncGroup" unique_id=1815727292]
+layout_mode = 2
+button_pressed = true
+
+[node name="FPSGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=88675776]
+layout_mode = 2
+
+[node name="FPSLimitLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FPSGroup" unique_id=1375664708]
+layout_mode = 2
+text = "FPS Limit"
+
+[node name="FPSOptions" type="OptionButton" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FPSGroup" unique_id=683544376]
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "30"
+popup/item_0/id = 0
+popup/item_1/text = "60"
+popup/item_1/id = 1
+popup/item_2/text = "120"
+popup/item_2/id = 2
+popup/item_3/text = "144"
+popup/item_3/id = 3
+popup/item_4/text = "240"
+popup/item_4/id = 4
+popup/item_5/text = "Unlimited"
+popup/item_5/id = 5
+
+[node name="GameOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=628195647]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer/GameOptions" unique_id=239107175]
+layout_mode = 2
+text = "New Game"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/GameOptions" unique_id=801636766]
+layout_mode = 2
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/GameOptions" unique_id=793467637]
+layout_mode = 2
+text = "Exit"

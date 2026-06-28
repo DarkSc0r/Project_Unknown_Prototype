@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 50
+@export var speed := 35
 @export var animation_tree : AnimationTree
 
 var input
