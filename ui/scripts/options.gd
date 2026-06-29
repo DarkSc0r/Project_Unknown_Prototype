@@ -8,7 +8,7 @@ extends Control
 
 # Resolution Variables
 var user_resolution := DisplayServer.screen_get_size()
-var resolutions := [Vector2i(3840, 2160), Vector2i(2560, 1440), Vector2i(1920,1080), Vector2i(1280,720)]
+var resolutions := [Vector2i(1280,720), Vector2i(1920,1080), Vector2i(2560, 1440), Vector2i(3840, 2160)]
 var current_resolutions : Array
 
 func _ready():

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bgk0wiykm6evn"]
 
-[ext_resource type="Script" uid="uid://dlcdou3vj1xmf" path="res://ui/main_menu.gd" id="1_m625n"]
-[ext_resource type="Script" uid="uid://cn33xiy3fvcrc" path="res://ui/new_game.gd" id="2_1h2mr"]
-[ext_resource type="Script" uid="uid://dxdq71rj1jsyt" path="res://ui/options.gd" id="2_wugcc"]
+[ext_resource type="Script" uid="uid://dlcdou3vj1xmf" path="res://ui/scripts/main_menu.gd" id="1_m625n"]
+[ext_resource type="Script" uid="uid://cn33xiy3fvcrc" path="res://ui/scripts/new_game.gd" id="2_1h2mr"]
+[ext_resource type="PackedScene" uid="uid://d18tbpar2d2nh" path="res://ui/Options_Panel.tscn" id="3_1h2mr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wtjmy"]
 font_size = 64
@@ -79,10 +79,11 @@ layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/SaveTitleGroup" unique_id=108046632]
 layout_mode = 2
-text = "Save Title"
+text = "Game Title"
 
 [node name="NewGameTitle" type="LineEdit" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/SaveTitleGroup" unique_id=1205708244]
 layout_mode = 2
+placeholder_text = "New Game"
 
 [node name="SeedGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=1183787699]
 layout_mode = 2
@@ -111,82 +112,11 @@ popup/item_1/id = 1
 
 [node name="CreateWorldButton" type="Button" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=370242592]
 layout_mode = 2
+text = "Create World"
 
-[node name="OptionsPanel" type="Control" parent="MarginContainer/HBoxContainer/LeftSidePanel" unique_id=1050494870]
+[node name="OptionsPanel" parent="MarginContainer/HBoxContainer/LeftSidePanel" unique_id=588754398 instance=ExtResource("3_1h2mr")]
 visible = false
-modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-script = ExtResource("2_wugcc")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel" unique_id=857760945]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="OptionsSection" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer" unique_id=1773487491]
-layout_mode = 2
-
-[node name="FullscreenGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=534386571]
-layout_mode = 2
-
-[node name="FullscreenLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FullscreenGroup" unique_id=1401491422]
-layout_mode = 2
-text = "Fullscreen"
-
-[node name="FullScreenCheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FullscreenGroup" unique_id=1677254517]
-layout_mode = 2
-button_pressed = true
-
-[node name="ResolutionGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=1480786583]
-layout_mode = 2
-
-[node name="ResolutionLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/ResolutionGroup" unique_id=1225356013]
-layout_mode = 2
-text = "Resolution"
-
-[node name="ResolutionOptions" type="OptionButton" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/ResolutionGroup" unique_id=1134085736]
-layout_mode = 2
-
-[node name="VSyncGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=1493679591]
-layout_mode = 2
-
-[node name="VSyncLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/VSyncGroup" unique_id=1247187720]
-layout_mode = 2
-text = "VSync"
-
-[node name="VSyncCheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/VSyncGroup" unique_id=1815727292]
-layout_mode = 2
-button_pressed = true
-
-[node name="FPSGroup" type="VBoxContainer" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection" unique_id=88675776]
-layout_mode = 2
-
-[node name="FPSLimitLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FPSGroup" unique_id=1375664708]
-layout_mode = 2
-text = "FPS Limit"
-
-[node name="FPSOptions" type="OptionButton" parent="MarginContainer/HBoxContainer/LeftSidePanel/OptionsPanel/MarginContainer/OptionsSection/FPSGroup" unique_id=683544376]
-layout_mode = 2
-item_count = 6
-popup/item_0/text = "30"
-popup/item_0/id = 0
-popup/item_1/text = "60"
-popup/item_1/id = 1
-popup/item_2/text = "120"
-popup/item_2/id = 2
-popup/item_3/text = "144"
-popup/item_3/id = 3
-popup/item_4/text = "240"
-popup/item_4/id = 4
-popup/item_5/text = "Unlimited"
-popup/item_5/id = 5
 
 [node name="GameOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=628195647]
 layout_mode = 2

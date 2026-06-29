@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://d18tbpar2d2nh"]
+
+[ext_resource type="Script" uid="uid://dxdq71rj1jsyt" path="res://ui/scripts/options.gd" id="1_r0uyh"]
+
+[node name="OptionsPanel" type="Control" unique_id=588754398]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r0uyh")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1264726612]
+layout_mode = 0
+offset_right = 119.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="OptionsSection" type="VBoxContainer" parent="MarginContainer" unique_id=1966260098]
+layout_mode = 2
+
+[node name="FullscreenGroup" type="VBoxContainer" parent="MarginContainer/OptionsSection" unique_id=1880937134]
+layout_mode = 2
+
+[node name="FullscreenLabel" type="Label" parent="MarginContainer/OptionsSection/FullscreenGroup" unique_id=2015080189]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="FullScreenCheckBox" type="CheckBox" parent="MarginContainer/OptionsSection/FullscreenGroup" unique_id=580053152]
+layout_mode = 2
+button_pressed = true
+
+[node name="ResolutionGroup" type="VBoxContainer" parent="MarginContainer/OptionsSection" unique_id=2139257217]
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="MarginContainer/OptionsSection/ResolutionGroup" unique_id=972212507]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOptions" type="OptionButton" parent="MarginContainer/OptionsSection/ResolutionGroup" unique_id=1744784106]
+layout_mode = 2
+
+[node name="VSyncGroup" type="VBoxContainer" parent="MarginContainer/OptionsSection" unique_id=886857175]
+layout_mode = 2
+
+[node name="VSyncLabel" type="Label" parent="MarginContainer/OptionsSection/VSyncGroup" unique_id=1368355689]
+layout_mode = 2
+text = "VSync"
+
+[node name="VSyncCheckBox" type="CheckBox" parent="MarginContainer/OptionsSection/VSyncGroup" unique_id=589245284]
+layout_mode = 2
+button_pressed = true
+
+[node name="FPSGroup" type="VBoxContainer" parent="MarginContainer/OptionsSection" unique_id=1547649347]
+layout_mode = 2
+
+[node name="FPSLimitLabel" type="Label" parent="MarginContainer/OptionsSection/FPSGroup" unique_id=1750334503]
+layout_mode = 2
+text = "FPS Limit"
+
+[node name="FPSOptions" type="OptionButton" parent="MarginContainer/OptionsSection/FPSGroup" unique_id=2140487928]
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "30"
+popup/item_0/id = 0
+popup/item_1/text = "60"
+popup/item_1/id = 1
+popup/item_2/text = "120"
+popup/item_2/id = 2
+popup/item_3/text = "144"
+popup/item_3/id = 3
+popup/item_4/text = "240"
+popup/item_4/id = 4
+popup/item_5/text = "Unlimited"
+popup/item_5/id = 5

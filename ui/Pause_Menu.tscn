@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dycxmejuy7eyd"]
+
+[ext_resource type="Script" uid="uid://cimiqrsjgoisu" path="res://ui/scripts/pause_menu.gd" id="1_r7m38"]
+[ext_resource type="PackedScene" uid="uid://d18tbpar2d2nh" path="res://ui/Options_Panel.tscn" id="2_8814s"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=228081017]
+process_mode = 3
+script = ExtResource("1_r7m38")
+
+[node name="Background" type="ColorRect" parent="." unique_id=331901773]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21950102, 0.21950102, 0.21950102, 0.627451)
+
+[node name="OptionsMenuMargin" type="MarginContainer" parent="." unique_id=1070980076]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 175
+theme_override_constants/margin_right = 550
+theme_override_constants/margin_bottom = 175
+
+[node name="OptionsContainer" type="PanelContainer" parent="OptionsMenuMargin" unique_id=449359370]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="OptionsPanel" parent="OptionsMenuMargin/OptionsContainer" unique_id=588754398 instance=ExtResource("2_8814s")]
+layout_mode = 2
+
+[node name="PauseMenuContainerMargin" type="MarginContainer" parent="." unique_id=1768774181]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -109.5
+offset_bottom = 109.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_right = 25
+
+[node name="PauseMenuContainer" type="PanelContainer" parent="PauseMenuContainerMargin" unique_id=432199658]
+layout_mode = 2
+
+[node name="PauseMenuMargin" type="MarginContainer" parent="PauseMenuContainerMargin/PauseMenuContainer" unique_id=2000910609]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="PauseMenuPanel" type="VBoxContainer" parent="PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin" unique_id=1611333395]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Resume" type="Button" parent="PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel" unique_id=1003966841]
+layout_mode = 2
+text = "Resume"
+
+[node name="SaveGame" type="Button" parent="PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel" unique_id=1676515521]
+layout_mode = 2
+text = "Save Game"
+
+[node name="Options" type="Button" parent="PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel" unique_id=1569204459]
+layout_mode = 2
+text = "Options"
+
+[node name="MainMenu" type="Button" parent="PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel" unique_id=1394728809]
+layout_mode = 2
+text = "Main Menu"

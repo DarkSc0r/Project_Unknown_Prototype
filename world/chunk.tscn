@@ -1,12 +1,10 @@
-[gd_scene format=3 uid="uid://d074s7in10q0e"]
+[gd_scene format=3 uid="uid://bgdgggjgr8tk8"]
 
-[ext_resource type="Script" uid="uid://b7pid5osd88su" path="res://main_game.gd" id="1_fos0i"]
-[ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://world/tiles/isometric-sandbox-sheet.png" id="1_uu6xs"]
-[ext_resource type="Script" uid="uid://cypg7jui2jnf2" path="res://world/script/chunk_manager.gd" id="2_cm0pq"]
-[ext_resource type="PackedScene" uid="uid://41d1tooi88jf" path="res://character/Player.tscn" id="2_r0du0"]
+[ext_resource type="Script" uid="uid://bq5gce1v0n8t7" path="res://world/script/chunk.gd" id="1_jbmh0"]
+[ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://world/tiles/isometric-sandbox-sheet.png" id="2_uc5gi"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
-texture = ExtResource("1_uu6xs")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6i0au"]
+texture = ExtResource("2_uc5gi")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
@@ -99,27 +97,16 @@ texture_region_size = Vector2i(32, 32)
 0:5/0/texture_origin = Vector2i(0, -8)
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
 
-[sub_resource type="TileSet" id="TileSet_fos0i"]
+[sub_resource type="TileSet" id="TileSet_4oxuw"]
 tile_shape = 1
 tile_size = Vector2i(32, 16)
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_cm0pq")
+sources/1 = SubResource("TileSetAtlasSource_6i0au")
 
-[node name="Game" type="Node2D" unique_id=2076801899]
-script = ExtResource("1_fos0i")
+[node name="Chunk" type="Node2D" unique_id=701413452]
+script = ExtResource("1_jbmh0")
 
-[node name="ChunkManager" type="Node2D" parent="." unique_id=1110510093]
-unique_name_in_owner = true
-script = ExtResource("2_cm0pq")
-
-[node name="ChunkTilemap" type="TileMapLayer" parent="ChunkManager" unique_id=1333414791]
+[node name="ChunkTilemap" type="TileMapLayer" parent="." unique_id=1929689757]
 y_sort_enabled = true
 texture_filter = 1
-tile_set = SubResource("TileSet_fos0i")
-
-[node name="Player" parent="." unique_id=2114966383 instance=ExtResource("2_r0du0")]
-unique_name_in_owner = true
-speed = 100
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1523229866]
-zoom = Vector2(3, 3)
+tile_set = SubResource("TileSet_4oxuw")

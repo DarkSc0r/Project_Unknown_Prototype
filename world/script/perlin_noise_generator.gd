@@ -5,7 +5,7 @@ var map_width := 256
 var map_length := 128
 var map_height := 1
 var noise_scale := 0.1
-var world_seed := 1234567890
+var world_seed := GameData.world_seed
 
 # Tile Dictionary	
 var white_tile := {"threshold": 0.4, "atlas": Vector2i(0,0), "walkable": true}
@@ -19,6 +19,7 @@ var tiles := [white_tile, green_tile, orange_tile]
 
 func generate_map():
 	var noise := FastNoiseLite.new()
+	print(world_seed)
 	noise.seed = world_seed
 	noise.noise_type = FastNoiseLite.TYPE_PERLIN
 	noise.frequency = noise_scale
@@ -29,7 +30,7 @@ func generate_map():
 		for z in range(map_length):
 			for y in range(map_height):
 				var noise_value := noise.get_noise_3d(x, y, z)
-				noise_value = (noise_value + 1) / 2      # 0-1
+				noise_value = (noise_value + 1) / 2    # 0-1
 
 				var tile_pos := Vector2i(x, z)
 				var atlas_coord : Vector2i			

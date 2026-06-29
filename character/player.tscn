@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://41d1tooi88jf"]
 
-[ext_resource type="Script" uid="uid://brdntdnpbnrme" path="res://character/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://brdntdnpbnrme" path="res://character/scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://d3v3krn3w84xa" path="res://character/Small-8-Direction-Characters_by_AxulArt.png" id="2_i3pqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hqtel"]
