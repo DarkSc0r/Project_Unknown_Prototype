@@ -1,0 +1,16 @@
+res://world/Chunk.tscn
+res://world/script/chunk_manager.gd
+res://world/Bunker_Hatch.tscn
+res://world/bunker_hatch.gd
+res://world/Bunker.tscn
+res://character/Player.tscn
+res://world/script/bunker.gd
+res://Main.tscn
+res://main_game.gd
+res://PauseManager.gd
+res://global/PauseManager.gd
+res://character/scripts/player.gd
+res://ui/scripts/pause_menu.gd
+res://ui/Pause_Menu.tscn
+res://world/tiles/Bunker_hatch.png
+res://world/script/chunk.gd

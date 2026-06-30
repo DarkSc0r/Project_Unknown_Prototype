@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@onready var pause_menu := self
+
 @onready var resume_button := $PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel/Resume
 @onready var save_game_button := $PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel/SaveGame
 @onready var options_button := $PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel/Options
@@ -14,6 +16,7 @@ var current_state := options_panel_state.CLOSED
 signal pause_menu_closed
 
 func _ready() -> void:
+	visible = true
 	resume_button.pressed.connect(_on_resume_pressed)
 	save_game_button.pressed.connect(_on_save_game_pressed)
 	options_button.pressed.connect(_on_options_pressed)
@@ -50,4 +53,5 @@ func _on_options_pressed():
 
 func _on_main_menu_pressed():
 	get_tree().paused = false
+	visible = false
 	get_tree().change_scene_to_file("res://ui/Main_Menu.tscn")

@@ -3,11 +3,28 @@ extends CharacterBody2D
 @export var speed := 35
 @export var animation_tree : AnimationTree
 
+var pause_menu := preload("res://ui/Pause_Menu.tscn")
+
+var pause_menu_exists := false
+var pause_menu_instance = null
+
 var input
 var playback : AnimationNodeStateMachinePlayback
 
 func _ready():
 	playback = animation_tree["parameters/playback"]
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("pause"):
+		if pause_menu_exists == false:
+			pause_menu_instance = pause_menu.instantiate()
+			get_tree().root.add_child(pause_menu_instance)
+			pause_menu_instance.connect("pause_menu_closed", set_pause_menu)
+			get_tree().paused = true
+			pause_menu_exists = true
+
+func set_pause_menu():
+	pause_menu_exists = false
 
 func _physics_process(_delta: float) -> void:
 	input = Input.get_vector("move_left", "move_right", "move_up", "move_down")

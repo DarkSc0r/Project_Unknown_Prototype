@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://yp2e25wc5isj"]
+
+[ext_resource type="Script" uid="uid://c1riwjxtjg48r" path="res://world/script/bunker.gd" id="1_wk8lp"]
+
+[node name="Bunker" type="Node2D" unique_id=820284738]
+script = ExtResource("1_wk8lp")
+
+[node name="BunkerTilemapLayer" type="TileMapLayer" parent="." unique_id=310443081]

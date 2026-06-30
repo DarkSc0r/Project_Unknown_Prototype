@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bgdgggjgr8tk8"]
 
-[ext_resource type="Script" uid="uid://bq5gce1v0n8t7" path="res://world/script/chunk.gd" id="1_jbmh0"]
-[ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://world/tiles/isometric-sandbox-sheet.png" id="2_uc5gi"]
+[ext_resource type="Script" uid="uid://bq5gce1v0n8t7" path="res://world/script/chunk.gd" id="1_4bnpy"]
+[ext_resource type="Texture2D" uid="uid://b1xijjuq342mh" path="res://world/tiles/isometric-sandbox-sheet.png" id="2_tbltk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6i0au"]
-texture = ExtResource("2_uc5gi")
+texture = ExtResource("2_tbltk")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
@@ -104,7 +104,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_6i0au")
 
 [node name="Chunk" type="Node2D" unique_id=701413452]
-script = ExtResource("1_jbmh0")
+script = ExtResource("1_4bnpy")
 
 [node name="ChunkTilemap" type="TileMapLayer" parent="." unique_id=1929689757]
 y_sort_enabled = true
