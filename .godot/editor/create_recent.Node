@@ -1,6 +1,6 @@
-TileMapLayer
 CollisionShape2D
 Area2D
+TileMapLayer
 Sprite2D
 Node2D
 PanelContainer

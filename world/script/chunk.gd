@@ -5,14 +5,13 @@ var chunk_coordinate : Vector2i
 var chunk_size := 32
 
 # Tile Dictionary	
-var white_tile := {"threshold": 0.4, "atlas": Vector2i(0,0), "walkable": true}
-var green_tile := {"threshold": 0.6, "atlas": Vector2i(0,3), "walkable": true}
-var orange_tile := {"threshold": 1, "atlas": Vector2i(0,6), "walkable": true}
+var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}
+var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0), "walkable": true}
 
 # Array of tiles
-var tiles := [white_tile, green_tile, orange_tile]
+var tiles := [stone_tile, dirt_tile]
 
-func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height : Noise, height_layers : int):
+func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height : Noise, height_layers : float):
 	for x in chunk_size:
 		for y in chunk_size:
 			var world_position := (chunk_coordinate * chunk_size)
@@ -27,7 +26,8 @@ func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height
 			var height_noise_value := height.get_noise_2d(world_offset.x, world_offset.y)
 			height_noise_value = (height_noise_value + 1) / 2
 
-			var height_level = int(floor(height_noise_value * biome_noise_value * height_layers))
+			var biome_ceiling = lerp(0.0, height_layers, biome_noise_value)
+			var height_level = int(lerp(0.0, biome_ceiling, height_noise_value))
 
 			var tilemap = world_tilemap[height_level]
 

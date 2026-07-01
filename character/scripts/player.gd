@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 35
+@export var speed := 75
 @export var animation_tree : AnimationTree
 
 var pause_menu := preload("res://ui/Pause_Menu.tscn")
@@ -12,6 +12,7 @@ var input
 var playback : AnimationNodeStateMachinePlayback
 
 func _ready():
+	GameData.player_speed = speed
 	playback = animation_tree["parameters/playback"]
 
 func _unhandled_input(_event: InputEvent) -> void:
@@ -28,10 +29,7 @@ func set_pause_menu():
 
 func _physics_process(_delta: float) -> void:
 	input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if input != Vector2.ZERO:
-		velocity = input * speed
-	else:
-		velocity = Vector2.ZERO
+	velocity = input * speed
 	move_and_slide()
 	select_animation()
 	update_animation_parameters()

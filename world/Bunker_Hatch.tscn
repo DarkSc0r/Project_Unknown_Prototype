@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjx00sjboffh0"]
 
-[ext_resource type="Script" uid="uid://d0k8e4b3qjukb" path="res://world/bunker_hatch.gd" id="1_qonp4"]
-[ext_resource type="Texture2D" uid="uid://cgbgllebhuj06" path="res://world/tiles/Bunker_hatch.png" id="1_sdh4b"]
+[ext_resource type="Script" uid="uid://d0k8e4b3qjukb" path="res://world/script/bunker_hatch.gd" id="1_qonp4"]
+[ext_resource type="Texture2D" uid="uid://cths75vou1kpf" path="res://world/tiles/Bunker_hatch.png" id="1_sdh4b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ramr"]
 radius = 20.0
@@ -15,6 +15,7 @@ texture = ExtResource("1_sdh4b")
 offset = Vector2(0, 8)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1830798328]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1723573779]
 position = Vector2(0, 14)
