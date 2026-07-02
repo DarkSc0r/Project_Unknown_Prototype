@@ -5,11 +5,9 @@ extends Node2D
 
 var player_preload := preload("res://character/Player.tscn")
 
-
 var player_in_area := false
 
 func _ready() -> void:
-	print(GameData.player_first_join)
 	var player_instance := player_preload.instantiate()
 	add_child(player_instance)
 	match GameData.player_first_join:
@@ -23,8 +21,8 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if player_in_area == true and Input.is_action_just_pressed("interact"):
-		GameData.player_leave_bunker = true
 		get_tree().change_scene_to_file("res://Main.tscn")
+		GameData.player_in_bunker = false
 		GameData.player_first_join = false
 	
 func _on_area_2d_body_entered(body):

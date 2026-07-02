@@ -15,7 +15,6 @@ texture = ExtResource("1_sdh4b")
 offset = Vector2(0, 8)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1830798328]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1723573779]
 position = Vector2(0, 14)

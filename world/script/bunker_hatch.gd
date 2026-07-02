@@ -11,6 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if player_in_area == true and Input.is_action_just_pressed("interact"):
 		GameData.player_first_join = false
+		GameData.player_in_bunker = true
 		get_tree().change_scene_to_file("res://world/Bunker.tscn")
 
 func _on_area_2d_body_entered(body):

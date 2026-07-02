@@ -1,9 +1,6 @@
-res://character/scripts/player.gd
 res://global/GameData.gd
-res://world/script/bunker.gd
 res://ui/scripts/new_game.gd
-res://world/script/bunker_hatch.gd
 res://world/script/chunk_manager.gd
-res://Main.tscn
-res://world/Bunker.tscn
-res://main.gd
+res://world/script/bunker.gd
+res://world/script/bunker_hatch.gd
+res://character/scripts/player.gd

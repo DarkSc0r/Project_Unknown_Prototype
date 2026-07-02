@@ -145,7 +145,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_tbltk")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5m2xq"]
-radius = 11.0
+radius = 14.0
 
 [node name="Bunker" type="Node2D" unique_id=820284738]
 script = ExtResource("1_wk8lp")
