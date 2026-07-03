@@ -13,14 +13,14 @@ var biome_noise_scale := .01
 
 var height_noise := FastNoiseLite.new()
 var height_noise_scale := 0.06
-var height_layers := 1.0 # TEMPORARY
+var height_layers := 0.0 # TEMPORARY || DEBUG
 
 var total_height_levels := height_layers + 1
 
 var world_tilemap_layers := []
 
 var loaded_chunks := {}
-var render_distance := 5
+var render_distance := 4
 
 var player_last_chunk_coordinate := Vector2i(999, 999)
 

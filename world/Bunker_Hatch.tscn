@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjx00sjboffh0"]
 
-[ext_resource type="Script" uid="uid://d0k8e4b3qjukb" path="res://world/script/bunker_hatch.gd" id="1_qonp4"]
+[ext_resource type="Script" uid="uid://d0k8e4b3qjukb" path="res://world/scripts/bunker_hatch.gd" id="1_qonp4"]
 [ext_resource type="Texture2D" uid="uid://cths75vou1kpf" path="res://world/tiles/Bunker_hatch.png" id="1_sdh4b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ramr"]

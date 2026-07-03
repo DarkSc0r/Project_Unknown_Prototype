@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ngpvrk2u5lb4"]
+
+[ext_resource type="Script" uid="uid://dedq7muwkka8l" path="res://ui/scripts/hud.gd" id="1_jun1y"]
+[ext_resource type="FontFile" uid="uid://dkkur8axjgqbd" path="res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf" id="2_qi0j7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ai1hy"]
+font = ExtResource("2_qi0j7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jun1y"]
+bg_color = Color(1, 0.07058824, 0.18431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi0j7"]
+bg_color = Color(0.6784314, 0.13333334, 0.74509805, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=1468283380]
+script = ExtResource("1_jun1y")
+
+[node name="FPS" type="Label" parent="." unique_id=1030599071]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -27.0
+offset_right = 44.0
+offset_bottom = -4.0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_ai1hy")
+
+[node name="InventoryDEBUG" type="Label" parent="." unique_id=259426293]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -36.5
+offset_right = 48.0
+offset_bottom = -13.5
+grow_vertical = 2
+
+[node name="HUDMargin" type="MarginContainer" parent="." unique_id=640593761]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HealthBar" type="ProgressBar" parent="HUDMargin" unique_id=1198663694]
+custom_minimum_size = Vector2(250, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_jun1y")
+show_percentage = false
+
+[node name="InfectionMeterDEBUG" type="ProgressBar" parent="HUDMargin" unique_id=595778373]
+custom_minimum_size = Vector2(250, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/fill = SubResource("StyleBoxFlat_qi0j7")
+show_percentage = false

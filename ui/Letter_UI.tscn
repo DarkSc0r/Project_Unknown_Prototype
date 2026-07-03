@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://d1bu07rdbcqst"]
+
+[ext_resource type="FontFile" uid="uid://dkkur8axjgqbd" path="res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf" id="1_mb34y"]
+[ext_resource type="Script" uid="uid://cklrjkye0cpko" path="res://ui/scripts/letter_ui.gd" id="1_px27v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_px27v"]
+font = ExtResource("1_mb34y")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mb34y"]
+font = ExtResource("1_mb34y")
+
+[node name="LetterUI" type="CanvasLayer" unique_id=1199254264]
+process_mode = 3
+script = ExtResource("1_px27v")
+
+[node name="InformationLabelDEBUG" type="Label" parent="." unique_id=396937504]
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -340.0
+offset_top = 40.0
+offset_right = 334.0
+offset_bottom = 540.0
+grow_horizontal = 2
+text = "Welcome to the Project: Unknown prototype!
+
+
+Controls:
+WASD - to move
+E - interact(to interact with the ladder and bunker hatch)
+Escape - to open up the pause menu
+NOTE: THERE IS NO SAVE SYSTEM IN THIS VERSION. 
+PRESSING THE MAIN MENU BUTTON WILL REQUIRE YOU TO MAKE A NEW GAME.
+NOTHING YOU DO WILL SAVE!!
+
+I hope you enjoy my prototype and please give me ANY feedback about the game!!"
+label_settings = SubResource("LabelSettings_px27v")
+
+[node name="LoreLabelDEBUG" type="Label" parent="." unique_id=1058365358]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(600, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -550.0
+offset_top = 80.0
+offset_right = 560.0
+offset_bottom = 520.0
+grow_horizontal = 2
+text = "The story of the game:
+Project Unknown is a game about re-creating life from virtually nothing.
+Awaking in a bunker, the player knows nothing.
+There is nothing inside the bunker except a letter, more on the later. 
+Since there is nothing inside the bunker, the player leaves the bunker to explore the outside world. 
+Exiting the bunker reveals a wasteland extending for miles. 
+Existing in the outside world comes with at a cost. 
+Prolonged exposer outside causes infection. 
+Returning to the bunker, the player reads the letter. 
+The letter explains a tiny bit of lore and teaches the player how to gather resources and craft a basic crafting bench. 
+The letter also explains to the player a tiny bit about the infection. 
+Eventually you learn that you can survival outside, but the time is very limited as you do not want to become infected. 
+You gather resources and eventually are able to expand your bunker(Bunker Upgrading). 
+Learning new recipes and the world around you, you are eventually able to create a Protective Suit. 
+This suit allows you to exist in the waste land for longer. With this you are able to explore more. 
+This leads to the player finding abandoned labs as well as other TBD(To Be Determined) structures. 
+In these structures you find new, much harder, recipes. 
+You also find Lore Items which help you figure out what happened. Exploring enough structures will get you the ultimate recipe. 
+The Creation Recipe. 
+This is the way to \"beat\" the game. It tells the player how to re-create life."
+label_settings = SubResource("LabelSettings_mb34y")
+
+[node name="Close" type="Button" parent="." unique_id=126467814]
+custom_minimum_size = Vector2(100, 40)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -50.0
+offset_right = 110.0
+offset_bottom = -10.0
+grow_vertical = 0
+text = "Close"
+
+[node name="LorePage" type="Button" parent="." unique_id=620762435]
+custom_minimum_size = Vector2(100, 40)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -50.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Lore"

@@ -8,6 +8,9 @@ var chunk_size := 32
 var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}
 var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0), "walkable": true}
 
+# Items
+var stone := preload("res://items/Stone.tscn")
+
 # Array of tiles
 var tiles := [stone_tile, dirt_tile]
 
@@ -37,5 +40,11 @@ func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height
 				if flat_noise_value <= tile["threshold"]:
 					atlas_coord	= tile["atlas"]
 					break
+			if atlas_coord == stone_tile["atlas"]:
+				if randf() < 0.10:
+					var spawn_position = tilemap.map_to_local(world_offset)
+					var stone_instance := stone.instantiate()
+					add_child(stone_instance)
+					stone_instance.position = spawn_position
 
 			tilemap.set_cell(world_offset, 1, atlas_coord)

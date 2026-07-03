@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cd0ulhk4qgkh3"]
+
+[ext_resource type="Texture2D" uid="uid://bpb1uhsre0rcj" path="res://world/tiles/letter.png" id="1_3u4v2"]
+[ext_resource type="Script" uid="uid://b2urf5cv7gqla" path="res://items/scripts/letter.gd" id="1_kl0vb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vvkx"]
+radius = 13.038404
+
+[node name="Letter" type="Node2D" unique_id=1941958828]
+script = ExtResource("1_kl0vb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729690059]
+texture = ExtResource("1_3u4v2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1525503003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=923734049]
+shape = SubResource("CircleShape2D_6vvkx")

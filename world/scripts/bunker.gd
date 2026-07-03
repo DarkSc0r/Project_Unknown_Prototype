@@ -4,6 +4,7 @@ extends Node2D
 @onready var ladder_area_trigger := $BunkerTilemapLayer/Area2D
 
 var player_preload := preload("res://character/Player.tscn")
+var letter_preload := preload("res://items/Letter.tscn")
 
 var player_in_area := false
 
@@ -16,6 +17,10 @@ func _ready() -> void:
 		true:
 			player_instance.position = bunker_tilemap.map_to_local(Vector2i(-1, -1))
 	
+	var letter_instance := letter_preload.instantiate()
+	add_child(letter_instance)
+	letter_instance.position = bunker_tilemap.map_to_local(Vector2i(-2, -9))
+
 	ladder_area_trigger.body_entered.connect(_on_area_2d_body_entered)
 	ladder_area_trigger.body_exited.connect(_on_area_2d_body_exited)
 

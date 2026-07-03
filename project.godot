@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Small_Survival_Test"
+config/name="Project: Unknow"
 run/main_scene="uid://bgk0wiykm6evn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 

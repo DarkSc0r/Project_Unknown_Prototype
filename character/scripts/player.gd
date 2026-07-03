@@ -1,22 +1,35 @@
 extends CharacterBody2D
 
+# Exports
 @export var speed := 75
 @export var animation_tree : AnimationTree
 
+# Pause Menu
 var pause_menu := preload("res://ui/Pause_Menu.tscn")
-
 var pause_menu_exists := false
 var pause_menu_instance = null
 
+# Death Screen
+var death_screen := preload("res://ui/Death_Screen.tscn")
+var death_screen_exists := false
+var death_screen_instance = null
+
+# HUD
+var hud := preload("res://ui/Hud.tscn")
+
+# Movement
 var input
 var playback : AnimationNodeStateMachinePlayback
 
+# Infection
 var infection_increase_accumulator := 0.0
 var infection_decrease_accumulator := 0.0
 
 func _ready():
 	GameData.player_speed = speed
 	playback = animation_tree["parameters/playback"]
+	var hud_instance = hud.instantiate()
+	add_child(hud_instance)
 
 func _physics_process(delta: float) -> void:
 	# Movement
@@ -27,24 +40,40 @@ func _physics_process(delta: float) -> void:
 	update_animation_parameters()
 	
 	# Infection
-	if GameData.player_in_bunker == false and GameData.infection_value < 100.0:
+	if GameData.player_health == 0.0 and death_screen_exists == false:
+		cause_death()
+	if GameData.player_health > 0.0 and GameData.infection_value == 100.0:
+		cause_damage(delta)
+	if GameData.player_in_bunker == false and GameData.infection_value < 100.0 and GameData.player_health > 0.0:
 		increase_infection(delta)
 	elif GameData.player_in_bunker == true and GameData.infection_value != 0.0:
 		decrease_infection(delta)
 
+func cause_death(): # DEBUG - Change name
+	death_screen_instance = death_screen.instantiate()
+	add_child(death_screen_instance)
+	get_tree().paused = true
+	death_screen_exists = true
+	infection_decrease_accumulator = 0.0
+	infection_increase_accumulator = 0.0
+
 func decrease_infection(delta_time : float):
 	infection_decrease_accumulator += delta_time
-	if infection_decrease_accumulator >= 2:
+	if infection_decrease_accumulator >= 1.5:
 		GameData.infection_value -= 1
 		infection_decrease_accumulator = 0
-		print(GameData.infection_value)
 
 func increase_infection(delta_time : float):
 	infection_increase_accumulator += delta_time
-	if infection_increase_accumulator >= 2:
-		GameData.infection_value += 1
+	if infection_increase_accumulator >= 1:
+		GameData.infection_value += 2
 		infection_increase_accumulator = 0
-		print(GameData.infection_value)
+
+func cause_damage(delta_time : float):
+	if GameData.infection_value == 100:
+		infection_increase_accumulator += delta_time
+		if infection_increase_accumulator >= 1:
+			GameData.player_health -= 2.5
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):

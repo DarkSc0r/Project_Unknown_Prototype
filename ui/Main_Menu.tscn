@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dlcdou3vj1xmf" path="res://ui/scripts/main_menu.gd" id="1_m625n"]
 [ext_resource type="Script" uid="uid://cn33xiy3fvcrc" path="res://ui/scripts/new_game.gd" id="2_1h2mr"]
+[ext_resource type="FontFile" uid="uid://dkkur8axjgqbd" path="res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf" id="2_507k7"]
 [ext_resource type="PackedScene" uid="uid://d18tbpar2d2nh" path="res://ui/Options_Panel.tscn" id="3_1h2mr"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_o32wx"]
+font = ExtResource("2_507k7")
+
 [sub_resource type="LabelSettings" id="LabelSettings_wtjmy"]
+font = ExtResource("2_507k7")
 font_size = 64
 
 [node name="Control" type="Control" unique_id=1237799054]
@@ -20,6 +25,7 @@ script = ExtResource("1_m625n")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_o32wx")
 
 [node name="Title" type="Label" parent="." unique_id=130127121]
 layout_mode = 1

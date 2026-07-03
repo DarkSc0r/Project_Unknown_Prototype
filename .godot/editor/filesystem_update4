@@ -1,6 +1,20 @@
-res://global/GameData.gd
-res://ui/scripts/new_game.gd
-res://world/script/chunk_manager.gd
-res://world/script/bunker.gd
-res://world/script/bunker_hatch.gd
+res://world/Bunker.tscn
+res://world/tiles/items/item scenes/Letter.tscn
+res://world/tiles/items/item_scenes/Letter.tscn
+res://world/scripts/letter.gd
+res://ui/Letter_UI.tscn
+res://ui/Main_Menu.tscn
+res://ui/scripts/letter_ui.gd
+res://world/scripts/bunker.gd
 res://character/scripts/player.gd
+res://world/tiles/WorldSpriteSheet.png
+res://world/scripts/chunk.gd
+res://ui/scripts/new_game.gd
+res://world/scripts/chunk_manager.gd
+res://ui/Hud.tscn
+res://ui/scripts/hud.gd
+res://ui/scripts/main_menu.gd
+res://global/GameData.gd
+res://items/scripts/stone.gd
+res://items/Stone.tscn
+res://items/scripts/letter.gd

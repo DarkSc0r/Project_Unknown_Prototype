@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgdgggjgr8tk8"]
 
-[ext_resource type="Script" uid="uid://bq5gce1v0n8t7" path="res://world/script/chunk.gd" id="1_4bnpy"]
+[ext_resource type="Script" uid="uid://bq5gce1v0n8t7" path="res://world/scripts/chunk.gd" id="1_4bnpy"]
 [ext_resource type="Texture2D" uid="uid://b88f4k18xlqjs" path="res://world/tiles/WorldSpriteSheet.png" id="2_4bnpy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbltk"]

@@ -16,4 +16,6 @@ func _on_create_world_button_pressed() -> void:
 	GameData.difficulty = difficulty.get_item_text(difficulty.selected)
 	GameData.player_first_join = true
 	GameData.player_in_bunker = true
+	GameData.player_health = 100.0
+	GameData.infection_value = 0.0
 	get_tree().change_scene_to_file("res://world/Bunker.tscn")

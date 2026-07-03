@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d074s7in10q0e"]
 
 [ext_resource type="Script" uid="uid://dnwb54i1amqwx" path="res://main.gd" id="1_cm0pq"]
-[ext_resource type="Script" uid="uid://cypg7jui2jnf2" path="res://world/script/chunk_manager.gd" id="2_cm0pq"]
+[ext_resource type="Script" uid="uid://cypg7jui2jnf2" path="res://world/scripts/chunk_manager.gd" id="2_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://b88f4k18xlqjs" path="res://world/tiles/WorldSpriteSheet.png" id="2_fos0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbltk"]

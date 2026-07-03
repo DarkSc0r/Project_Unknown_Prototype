@@ -1,7 +1,5 @@
 extends Control
 
-@onready var fps_counter := $FPS
-
 # Main Menu Imports
 @onready var left_panel := $MarginContainer/HBoxContainer/LeftSidePanel
 @onready var new_game_panel := $MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel
@@ -18,10 +16,7 @@ func _ready():
 	new_game_button.pressed.connect(_on_new_game_button_pressed)
 	options_button.pressed.connect(_on_options_button_pressed)
 	exit_button.pressed.connect(_on_exit_button_pressed)
-
-func _process(_delta: float) -> void:
-	fps_counter.text = str(Engine.get_frames_per_second())
-
+	
 func _on_new_game_button_pressed() -> void:
 	match current_state:
 		left_panel_state.CLOSED:

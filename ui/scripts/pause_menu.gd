@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-@onready var pause_menu := self
-
 @onready var resume_button := $PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel/Resume
 @onready var save_game_button := $PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel/SaveGame
 @onready var options_button := $PauseMenuContainerMargin/PauseMenuContainer/PauseMenuMargin/PauseMenuPanel/Options
