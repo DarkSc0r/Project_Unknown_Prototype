@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d074s7in10q0e"]
+
+[ext_resource type="Script" uid="uid://dnwb54i1amqwx" path="res://main/scripts/main.gd" id="1_5kcm4"]
+[ext_resource type="Script" uid="uid://cypg7jui2jnf2" path="res://world/scripts/chunk_manager.gd" id="2_cmtxc"]
+[ext_resource type="TileSet" uid="uid://bel13a6v7ggq7" path="res://resources/tilemaps/main_game_tilemap.tres" id="3_5kcm4"]
+
+[node name="Game" type="Node2D" unique_id=2076801899]
+script = ExtResource("1_5kcm4")
+
+[node name="ChunkManager" type="Node2D" parent="." unique_id=1110510093]
+unique_name_in_owner = true
+script = ExtResource("2_cmtxc")
+
+[node name="ChunkTilemap" type="TileMapLayer" parent="ChunkManager" unique_id=1333414791]
+y_sort_enabled = true
+texture_filter = 1
+tile_set = ExtResource("3_5kcm4")

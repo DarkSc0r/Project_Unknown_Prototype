@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var main_menu_button := $DeathScreenContainer/DeathScreenMargin/DeathScreenPanel/MainMenuButtonMargin/MainMenuButton
+@onready var main_menu_button := $DeathScreenContainer/MainMenuButton
 
 func _ready() -> void:
 	main_menu_button.pressed.connect(_on_main_menu_pressed)

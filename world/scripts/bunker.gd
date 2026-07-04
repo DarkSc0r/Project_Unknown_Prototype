@@ -26,7 +26,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if player_in_area == true and Input.is_action_just_pressed("interact"):
-		get_tree().change_scene_to_file("res://Main.tscn")
+		get_tree().change_scene_to_file("res://main/Main.tscn")
 		GameData.player_in_bunker = false
 		GameData.player_first_join = false
 	
