@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 	update_animation_parameters()
 	
 	# Infection
-	if GameData.player_health == 0.0 and death_screen_exists == false:
+	if GameData.player_health <= 0.0 and death_screen_exists == false:
 		cause_death()
 	if GameData.player_health > 0.0 and GameData.infection_value == 100.0:
 		cause_damage(delta)
@@ -73,7 +73,7 @@ func cause_damage(delta_time : float):
 	if GameData.infection_value == 100:
 		infection_increase_accumulator += delta_time
 		if infection_increase_accumulator >= 1:
-			GameData.player_health -= 2.5
+			GameData.player_health -= 3 * delta_time
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):

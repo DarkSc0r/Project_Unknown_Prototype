@@ -1,7 +1,0 @@
-res://world/scripts/bunker.gd
-res://character/scripts/player.gd
-res://main/Main.tscn
-res://ui/scripts/death_screen.gd
-res://world/Chunk.tscn
-res://world/Bunker.tscn
-res://resources/tilemaps/main_game_tilemap.tres

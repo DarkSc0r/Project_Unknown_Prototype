@@ -11,8 +11,8 @@ var player_first_join : bool
 var player_in_bunker : bool
 var player_health : float
 
-# Inventory || DEBUG
-var stone_in_inventory : int
+# Inventory
+var inventory : Array[InventorySlot]
 
 # Infection
 var infection_value : float

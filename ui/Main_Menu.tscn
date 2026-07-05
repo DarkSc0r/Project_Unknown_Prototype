@@ -110,11 +110,13 @@ text = "Difficulty"
 
 [node name="NewGameDifficultySelection" type="OptionButton" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection/DifficultyGroup" unique_id=470902289]
 layout_mode = 2
-item_count = 2
+item_count = 3
 popup/item_0/text = "Normal"
 popup/item_0/id = 0
 popup/item_1/text = "Challenger"
 popup/item_1/id = 1
+popup/item_2/text = "Hell"
+popup/item_2/id = 2
 
 [node name="CreateWorldButton" type="Button" parent="MarginContainer/HBoxContainer/LeftSidePanel/NewGamePanel/MarginContainer/NewGameSection" unique_id=370242592]
 layout_mode = 2
