@@ -12,7 +12,8 @@ var player_in_bunker : bool
 var player_health : float
 
 # Inventory
-var inventory : Array[InventorySlot]
+var inventory : Array
+var inventory_slot_number : int
 
 # Infection
 var infection_value : float

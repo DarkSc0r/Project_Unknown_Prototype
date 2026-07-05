@@ -4,6 +4,19 @@ extends CharacterBody2D
 @export var speed := 75
 @export var animation_tree : AnimationTree
 
+# Movement
+var input
+var playback : AnimationNodeStateMachinePlayback
+
+# Infection
+var infection_increase_accumulator := 0.0
+var infection_decrease_accumulator := 0.0
+
+# Inventory
+@export var inventory : Resource
+@onready var inventory_scene := $Inventory
+var is_inventory_open : bool
+
 # Pause Menu
 var pause_menu := preload("res://ui/Pause_Menu.tscn")
 var pause_menu_exists := false
@@ -17,25 +30,22 @@ var death_screen_instance = null
 # HUD
 var hud := preload("res://ui/Hud.tscn")
 
-# Movement
-var input
-var playback : AnimationNodeStateMachinePlayback
-
-# Infection
-var infection_increase_accumulator := 0.0
-var infection_decrease_accumulator := 0.0
-
 func _ready():
 	GameData.player_speed = speed
 	playback = animation_tree["parameters/playback"]
+
 	var hud_instance = hud.instantiate()
 	add_child(hud_instance)
 
 func _physics_process(delta: float) -> void:
 	# Movement
-	input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = input * speed
-	move_and_slide()
+	is_inventory_open = inventory_scene.is_open
+	if is_inventory_open == false:
+		input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		velocity = input * speed
+		move_and_slide()
+	else:
+		velocity = Vector2.ZERO
 	select_animation()
 	update_animation_parameters()
 	
@@ -48,6 +58,16 @@ func _physics_process(delta: float) -> void:
 		increase_infection(delta)
 	elif GameData.player_in_bunker == true and GameData.infection_value != 0.0:
 		decrease_infection(delta)
+
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("pause") and is_inventory_open == false:
+		if pause_menu_exists == false:
+			pause_menu_instance = pause_menu.instantiate()
+			get_tree().root.add_child(pause_menu_instance)
+			pause_menu_instance.connect("pause_menu_closed", set_pause_menu)
+			get_tree().paused = true
+			pause_menu_exists = true
 
 func cause_death(): # DEBUG - Change name
 	death_screen_instance = death_screen.instantiate()
@@ -74,15 +94,6 @@ func cause_damage(delta_time : float):
 		infection_increase_accumulator += delta_time
 		if infection_increase_accumulator >= 1:
 			GameData.player_health -= 3 * delta_time
-
-func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("pause"):
-		if pause_menu_exists == false:
-			pause_menu_instance = pause_menu.instantiate()
-			get_tree().root.add_child(pause_menu_instance)
-			pause_menu_instance.connect("pause_menu_closed", set_pause_menu)
-			get_tree().paused = true
-			pause_menu_exists = true
 
 func set_pause_menu():
 	pause_menu_exists = false

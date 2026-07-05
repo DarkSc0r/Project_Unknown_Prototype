@@ -9,6 +9,10 @@ func _ready() -> void:
 	create_world_button.pressed.connect(_on_create_world_button_pressed)
 	
 func _on_create_world_button_pressed() -> void:
+	initialize_game_data()
+	get_tree().change_scene_to_file("res://world/Bunker.tscn")
+
+func initialize_game_data():
 	GameData.title = title.text
 	if world_seed.text.is_empty():
 		world_seed.text = str(randi())
@@ -18,4 +22,10 @@ func _on_create_world_button_pressed() -> void:
 	GameData.player_in_bunker = true
 	GameData.player_health = 100.0
 	GameData.infection_value = 0.0
-	get_tree().change_scene_to_file("res://world/Bunker.tscn")
+	GameData.inventory_slot_number = 28
+	# GameData.inventory.clear()
+	# for i in range(GameData.inventory_slot_number):
+	# 	var inventory_slot = InventorySlot.new()
+	# 	inventory_slot.item = null
+	# 	inventory_slot.quantity = 0
+	# 	GameData.inventory.append(inventory_slot)

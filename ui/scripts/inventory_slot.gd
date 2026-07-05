@@ -1,6 +1,10 @@
-extends Resource
+extends Panel
 
-class_name InventorySlot
+@onready var item_icon := $CenterContainer/Panel/InventoryItem
 
-@export var item : Item
-@export var quantity : int
+func update(item: InventoryItem):
+    if !item:
+        item_icon.visible = false
+    else:
+        item_icon.visible = true
+        item_icon.texture = item.item_icon

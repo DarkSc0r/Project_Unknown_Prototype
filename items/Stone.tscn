@@ -1,13 +1,37 @@
 [gd_scene format=3 uid="uid://b2i7bmxidvvw0"]
 
 [ext_resource type="Texture2D" uid="uid://psxpyf74c5q7" path="res://items/assets/stone.png" id="1_6xb3o"]
-[ext_resource type="Script" uid="uid://d3l1bhwblx40f" path="res://items/scripts/stone.gd" id="1_kubub"]
+
+[sub_resource type="GDScript" id="GDScript_6xb3o"]
+script/source = "extends Node2D
+
+@onready var stone_area_trigger := $Area2D
+
+var player_in_area := false
+
+func _ready() -> void:
+	stone_area_trigger.body_entered.connect(_on_area_2d_body_entered)
+	stone_area_trigger.body_exited.connect(_on_area_2d_body_exited)
+
+func _process(_delta: float) -> void:
+	if player_in_area == true and Input.is_action_just_pressed(\"interact\"):
+		# DEBUG STUFFS
+		self.queue_free()
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group(\"Player\"):
+		player_in_area = true
+
+func _on_area_2d_body_exited(body):
+	if body.is_in_group(\"Player\"):
+		player_in_area = false
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kubub"]
 radius = 12.0
 
 [node name="Stone" type="Node2D" unique_id=1286620143]
-script = ExtResource("1_kubub")
+script = SubResource("GDScript_6xb3o")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1697073839]
 texture = ExtResource("1_6xb3o")
