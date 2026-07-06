@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 [autoload]
 
 GameData="*uid://bvcl3kdqrbwv7"
+InventoryManager="*uid://baxnpboy4fofe"
 
 [display]
 

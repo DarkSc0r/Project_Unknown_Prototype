@@ -1,0 +1,15 @@
+res://ui/scripts/inventory_ui.gd
+res://items/stone.gd
+res://items/scripts/stone.gd
+res://items/Stone.tscn
+res://resources/tilemaps/main_game_tilemap.tres
+res://ui/scripts/inventory.gd
+res://resources/items/stone.tres
+res://resources/player_inventory.tres
+res://character/Player.tscn
+res://global/InventoryManager.gd
+res://world/scripts/chunk_manager.gd
+res://ui/Inventory_Slot.tscn
+res://global/GameData.gd
+res://ui/scripts/inventory_slot.gd
+res://ui/scripts/new_game.gd

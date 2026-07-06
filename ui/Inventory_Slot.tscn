@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c13ioetot657f" path="res://ui/assets/Inventory_Slot.png" id="1_b5ekt"]
 [ext_resource type="Script" uid="uid://cnl184y3unmd1" path="res://ui/scripts/inventory_slot.gd" id="1_jsnjs"]
+[ext_resource type="FontFile" uid="uid://dkkur8axjgqbd" path="res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf" id="3_51pnc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mon3t"]
+font = ExtResource("3_51pnc")
 
 [node name="InventorySlot" type="Panel" unique_id=1220834497]
 self_modulate = Color(1, 1, 1, 0)
@@ -30,3 +34,12 @@ offset_bottom = 51.0
 layout_mode = 2
 
 [node name="InventoryItem" type="Sprite2D" parent="CenterContainer/Panel" unique_id=41914066]
+
+[node name="ItemQuantity" type="Label" parent="CenterContainer/Panel" unique_id=386482681]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 25.0
+offset_bottom = 24.0
+text = "99"
+label_settings = SubResource("LabelSettings_mon3t")

@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1783279527
+::res://::1783299968
 export_presets.cfg::TextFile::-1::1783062861::0::1::::<><><>0<>0<><>::
 ::res://builds/::1783062861
 ::res://character/::1783277488
@@ -13,7 +13,7 @@ OFL.txt::TextFile::-1::1783056068::0::1::::<><><>0<>0<><>::
 ShareTechMono-Regular.ttf::FontFile::7883040697679788165::1783056068::1783056068::1::::<><><>0<>0<>85872197ed8846b08cbfe8085b6868cb<>res://.godot/imported/ShareTechMono-Regular.ttf-bae377e0aa64d1e2619f82edfd55875e.fontdata::
 ::res://global/::1782783187
 GameData.gd::GDScript::3865233575367333530::1783276319::0::1::::<>Node<><>0<>0<><>::
-::res://items/::1783279518
+::res://items/::1783300342
 Letter.tscn::PackedScene::5036251710190828290::1783058843::0::1::::<><><>0<>0<><>::uid://bpb1uhsre0rcj::::res://world/tiles/letter.png<>uid://b2urf5cv7gqla::::res://items/scripts/letter.gd
 Stone.tscn::PackedScene::4299979879693931505::1783279518::0::1::::<><><>0<>0<><>::uid://psxpyf74c5q7::::res://items/assets/stone.png
 ::res://items/assets/::1783279354
@@ -23,6 +23,7 @@ stone_icon.png::CompressedTexture2D::2196563084533306767::1783279344::1783279354
 ::res://items/scripts/::1783279397
 inventory_item.gd::GDScript::1407830211297225922::1783279397::0::1::::InventoryItem<>Resource<><>0<>0<><>::
 letter.gd::GDScript::4323849714634999814::1783061712::0::1::::<>Node2D<><>0<>0<><>::
+stone.gd::GDScript::385084631178889269::1783300356::0::1::::<>Node2D<><>0<>0<><>::
 ::res://main/::1783220443
 Main.tscn::PackedScene::8981837860972588318::1783220443::0::1::::<><><>0<>0<><>::uid://dnwb54i1amqwx::::res://main/scripts/main.gd<>uid://cypg7jui2jnf2::::res://world/scripts/chunk_manager.gd<>uid://bel13a6v7ggq7::::res://resources/tilemaps/main_game_tilemap.tres
 ::res://main/scripts/::1783203341
@@ -55,7 +56,7 @@ death_screen.gd::GDScript::3424413964152124458::1783203623::0::1::::<>CanvasLaye
 hud.gd::GDScript::7447239838372459037::1783271347::0::1::::<>CanvasLayer<><>0<>0<><>::
 inventory.gd::GDScript::6957220051091496751::1783277170::0::1::::Inventory<>Resource<><>0<>0<><>::
 inventory_slot.gd::GDScript::5709643624537973976::1783278387::0::1::::<>Panel<><>0<>0<><>::
-inventory_ui.gd::GDScript::1841985199543300833::1783279485::0::1::::<>CanvasLayer<><>0<>0<><>::
+inventory_ui.gd::GDScript::1841985199543300833::1783300251::0::1::::<>CanvasLayer<><>0<>0<><>::
 letter_ui.gd::GDScript::5498486782607411262::1783058889::0::1::::<>CanvasLayer<><>0<>0<><>::
 main_menu.gd::GDScript::7935676333387493241::1783061372::0::1::::<>Control<><>0<>0<><>::
 new_game.gd::GDScript::5744840519393379396::1783276333::0::1::::<>Control<><>0<>0<><>::

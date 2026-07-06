@@ -23,9 +23,4 @@ func initialize_game_data():
 	GameData.player_health = 100.0
 	GameData.infection_value = 0.0
 	GameData.inventory_slot_number = 28
-	# GameData.inventory.clear()
-	# for i in range(GameData.inventory_slot_number):
-	# 	var inventory_slot = InventorySlot.new()
-	# 	inventory_slot.item = null
-	# 	inventory_slot.quantity = 0
-	# 	GameData.inventory.append(inventory_slot)
+	GameData.player_inventory = preload("res://resources/player_inventory.tres")

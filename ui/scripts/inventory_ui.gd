@@ -3,16 +3,17 @@ extends CanvasLayer
 @onready var inventory := preload("res://resources/player_inventory.tres")
 @onready var inventory_slots := preload("res://ui/Inventory_Slot.tscn")
 @onready var slots_grid := $InventoryBackground/InventoryMargin/InventoryGrid
+
 var slots : Array
 
 var is_open = false
 
 func _ready() -> void:
-	print(slots)
 	create_slots()
 	slots = slots_grid.get_children()
 	await get_tree().process_frame
 	update_slots()
+	#InventoryManager.connect("update_item_slot", update_slots)
 	close()
 
 func _process(_delta: float) -> void:
@@ -28,7 +29,9 @@ func create_slots():
 		slots_grid.add_child(slot_instance)
 
 func update_slots():
+	print("updated called")
 	for i in range(min(inventory.items.size(), slots.size())):
+		slots[i].slot_index = i
 		slots[i].update(inventory.items[i])
 
 func open():
