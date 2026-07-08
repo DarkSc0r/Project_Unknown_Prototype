@@ -13,7 +13,7 @@ func _ready() -> void:
 	slots = slots_grid.get_children()
 	await get_tree().process_frame
 	update_slots()
-	#InventoryManager.connect("update_item_slot", update_slots)
+	InventoryManager.connect("update_item_slot", update_slots)
 	close()
 
 func _process(_delta: float) -> void:
@@ -29,7 +29,6 @@ func create_slots():
 		slots_grid.add_child(slot_instance)
 
 func update_slots():
-	print("updated called")
 	for i in range(min(inventory.items.size(), slots.size())):
 		slots[i].slot_index = i
 		slots[i].update(inventory.items[i])

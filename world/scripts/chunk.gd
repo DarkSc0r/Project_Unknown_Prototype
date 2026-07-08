@@ -2,7 +2,7 @@ extends Node2D
 
 # Chunk Generation Variables
 var chunk_coordinate : Vector2i
-var chunk_size := 32
+var chunk_size := 32 # Tiles
 
 # Tile Dictionary	
 var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}
@@ -40,11 +40,11 @@ func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height
 				if flat_noise_value <= tile["threshold"]:
 					atlas_coord	= tile["atlas"]
 					break
-			if atlas_coord == stone_tile["atlas"]:
-				if randf() < 0.10:
-					var spawn_position = tilemap.map_to_local(world_offset)
-					var stone_instance := stone.instantiate()
-					add_child(stone_instance)
-					stone_instance.position = spawn_position
+			# if atlas_coord == stone_tile["atlas"]:
+			# 	if randf() < 0.10:
+			# 		var spawn_position = tilemap.map_to_local(world_offset)
+			# 		var stone_instance := stone.instantiate()
+			# 		add_child(stone_instance)
+			# 		stone_instance.position = spawn_position
 
 			tilemap.set_cell(world_offset, 1, atlas_coord)
