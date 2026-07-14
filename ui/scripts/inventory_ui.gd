@@ -10,11 +10,14 @@ var is_open = false
 
 func _ready() -> void:
 	create_slots()
+
+	# Set each slot to their slot_index and updates them
 	slots = slots_grid.get_children()
 	await get_tree().process_frame
-	update_slots()
+
 	InventoryManager.connect("update_item_slot", update_slots)
-	close()
+
+	update_slots()
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("inventory"):

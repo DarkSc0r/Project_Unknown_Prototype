@@ -1,8 +1,10 @@
 extends Node2D
 
+class_name Chunk
+
 # Chunk Generation Variables
 var chunk_coordinate : Vector2i
-var chunk_size := 32 # Tiles
+const chunk_size := 32 # Tiles
 
 # Tile Dictionary	
 var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}

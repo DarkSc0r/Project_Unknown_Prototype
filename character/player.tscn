@@ -475,3 +475,4 @@ position = Vector2(0, 1)
 zoom = Vector2(3, 3)
 
 [node name="Inventory" parent="." unique_id=1686426487 instance=ExtResource("3_dl7da")]
+visible = false

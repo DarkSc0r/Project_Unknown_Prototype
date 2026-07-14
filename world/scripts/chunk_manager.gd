@@ -13,7 +13,7 @@ var biome_noise_scale := .01
 
 var height_noise := FastNoiseLite.new()
 var height_noise_scale := 0.06
-var height_layers := 5.0 # DEBUG
+var height_layers := 0.0 # DEBUG
 
 var total_height_levels := height_layers + 1
 
@@ -76,7 +76,7 @@ func set_player(player_body : CharacterBody2D):
 
 # Gets the chunk coordinate of whatever you need
 func get_chunk_coordinate(world_position : Vector2):
-	var chunk_coordinate = Vector2i(chunk_tilemap.local_to_map(world_position) / 32)
+	var chunk_coordinate = Vector2i(chunk_tilemap.local_to_map(world_position) / Chunk.chunk_size)
 	return chunk_coordinate
 
 func update_chunk():
