@@ -22,5 +22,5 @@ func initialize_game_data():
 	GameData.player_in_bunker = true
 	GameData.player_health = 100.0
 	GameData.infection_value = 0.0
-	GameData.inventory_slot_number = 28
+	GameData.inventory_slot_number = 32
 	GameData.player_inventory = preload("res://resources/player_inventory.tres")

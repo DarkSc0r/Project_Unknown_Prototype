@@ -27,9 +27,12 @@ func _process(_delta: float) -> void:
 			open()
 
 func create_slots():
+	inventory.items.resize(GameData.inventory_slot_number)
+	inventory.item_quantities.resize(GameData.inventory_slot_number)
 	for i in range(GameData.inventory_slot_number):
 		var slot_instance = inventory_slots.instantiate()
 		slots_grid.add_child(slot_instance)
+	
 
 func update_slots():
 	for i in range(min(inventory.items.size(), slots.size())):

@@ -1,7 +1,5 @@
-res://world/scripts/chunk.gd
-res://world/scripts/chunk_manager.gd
-res://character/Player.tscn
+res://ui/Inventory.tscn
 res://resources/tilemaps/main_game_tilemap.tres
+res://ui/scripts/new_game.gd
 res://ui/scripts/inventory_ui.gd
 res://resources/player_inventory.tres
-res://ui/Inventory.tscn

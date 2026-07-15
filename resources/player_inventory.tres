@@ -1,11 +1,8 @@
 [gd_resource type="Resource" script_class="Inventory" format=3 uid="uid://bhmsa2ufmfikr"]
 
 [ext_resource type="Script" uid="uid://ub701eimnpc1" path="res://items/scripts/inventory_item.gd" id="1_1njko"]
-[ext_resource type="Resource" uid="uid://b1g03deirr2r4" path="res://resources/items/stone.tres" id="2_1njko"]
 [ext_resource type="Script" uid="uid://c6eenr3kjjjsp" path="res://ui/scripts/inventory.gd" id="3_hfe8y"]
 
 [resource]
 script = ExtResource("3_hfe8y")
-items = Array[ExtResource("1_1njko")]([ExtResource("2_1njko"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
-item_quantities = Array[int]([8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 metadata/_custom_type_script = "uid://c6eenr3kjjjsp"
