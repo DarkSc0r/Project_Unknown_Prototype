@@ -12,11 +12,6 @@ var playback : AnimationNodeStateMachinePlayback
 var infection_increase_accumulator := 0.0
 var infection_decrease_accumulator := 0.0
 
-# Inventory
-@export var inventory : Resource
-@onready var inventory_scene := $Inventory
-var is_inventory_open : bool
-
 # Pause Menu
 var pause_menu := preload("res://ui/Pause_Menu.tscn")
 var pause_menu_exists := false
@@ -39,13 +34,9 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	# Movement
-	is_inventory_open = inventory_scene.is_open
-	if is_inventory_open == false:
-		input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-		velocity = input * speed
-		move_and_slide()
-	else:
-		velocity = Vector2.ZERO
+	input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	velocity = input * speed
+	move_and_slide()
 	select_animation()
 	update_animation_parameters()
 	
@@ -61,7 +52,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("pause") and is_inventory_open == false:
+	if Input.is_action_just_pressed("pause"): # and is_inventory_open == false:
 		if pause_menu_exists == false:
 			pause_menu_instance = pause_menu.instantiate()
 			get_tree().root.add_child(pause_menu_instance)

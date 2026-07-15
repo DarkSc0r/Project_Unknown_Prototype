@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1784084863
+::res://::1784089349
 export_presets.cfg::TextFile::-1::1783062861::0::1::::<><><>0<>0<><>::
 ::res://builds/::1783062861
 ::res://character/::1784084864
@@ -51,7 +51,7 @@ Letter_UI.tscn::PackedScene::8987497055271776631::1783058496::0::1::::<><><>0<>0
 Main_Menu.tscn::PackedScene::2829755193080683615::1783222930::0::1::::<><><>0<>0<><>::uid://dlcdou3vj1xmf::::res://ui/scripts/main_menu.gd<>uid://cn33xiy3fvcrc::::res://ui/scripts/new_game.gd<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
 Options_Panel.tscn::PackedScene::9053452648867470485::1782695092::0::1::::<><><>0<>0<><>::uid://dxdq71rj1jsyt::::res://ui/scripts/options.gd
 Pause_Menu.tscn::PackedScene::8849341199199371395::1782783331::0::1::::<><><>0<>0<><>::uid://cimiqrsjgoisu::::res://ui/scripts/pause_menu.gd<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
-::res://ui/assets/::1784088022
+::res://ui/assets/::1784088232
 Inventory_Background.png::CompressedTexture2D::5442707532445341225::1784088190::1784088232::1::::<><><>0<>0<>b445101ec1246fbea864f22eb721d4a3<>res://.godot/imported/Inventory_Background.png-cd6334d2087dcda14cba59b1189ec11c.ctex::
 Inventory_Slot.png::CompressedTexture2D::6656064856252943077::1783275767::1783275767::1::::<><><>0<>0<>4256efdb18b11fd1fba58d4b452e8fc4<>res://.godot/imported/Inventory_Slot.png-e6a68a40026f44e0b5e74c3806153355.ctex::
 ::res://ui/scripts/::1783304826

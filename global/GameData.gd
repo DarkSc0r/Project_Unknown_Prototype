@@ -11,11 +11,5 @@ var player_first_join : bool
 var player_in_bunker : bool
 var player_health : float
 
-var player_inventory : Inventory
-
-# Inventory
-var inventory : Array
-var inventory_slot_number : int
-
 # Infection
 var infection_value : float

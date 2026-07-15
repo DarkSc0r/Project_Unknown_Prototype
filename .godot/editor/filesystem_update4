@@ -1,5 +1,8 @@
-res://ui/Inventory.tscn
-res://resources/tilemaps/main_game_tilemap.tres
+res://global/GameData.gd
 res://ui/scripts/new_game.gd
-res://ui/scripts/inventory_ui.gd
-res://resources/player_inventory.tres
+res://main/Main.tscn
+res://resources/tilemaps/main_game_tilemap.tres
+res://character/scripts/player.gd
+res://items/Stone.tscn
+res://character/Player.tscn
+res://world/scripts/chunk.gd

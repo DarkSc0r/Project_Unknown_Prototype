@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://41d1tooi88jf"]
 
 [ext_resource type="Script" uid="uid://brdntdnpbnrme" path="res://character/scripts/player.gd" id="1_onrkg"]
-[ext_resource type="Resource" uid="uid://bhmsa2ufmfikr" path="res://resources/player_inventory.tres" id="2_cq488"]
 [ext_resource type="Texture2D" uid="uid://d3v3krn3w84xa" path="res://character/Small-8-Direction-Characters_by_AxulArt.png" id="2_i3pqv"]
-[ext_resource type="PackedScene" uid="uid://bsn6agiqbawf1" path="res://ui/Inventory.tscn" id="3_dl7da"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hqtel"]
 radius = 4.0
@@ -448,7 +446,6 @@ z_index = 2
 motion_mode = 1
 script = ExtResource("1_onrkg")
 animation_tree = NodePath("AnimationTree")
-inventory = ExtResource("2_cq488")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168503455]
 position = Vector2(0, 3)
@@ -473,6 +470,3 @@ frame = 8
 [node name="Camera2D" type="Camera2D" parent="." unique_id=486246558]
 position = Vector2(0, 1)
 zoom = Vector2(3, 3)
-
-[node name="Inventory" parent="." unique_id=1686426487 instance=ExtResource("3_dl7da")]
-visible = false

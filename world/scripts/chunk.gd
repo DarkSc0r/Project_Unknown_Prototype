@@ -10,9 +10,6 @@ const chunk_size := 32 # Tiles
 var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}
 var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0), "walkable": true}
 
-# Items
-var stone := preload("res://items/Stone.tscn")
-
 # Array of tiles
 var tiles := [stone_tile, dirt_tile]
 
