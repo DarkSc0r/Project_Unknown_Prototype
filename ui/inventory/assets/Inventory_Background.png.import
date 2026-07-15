@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c13ioetot657f"
-path="res://.godot/imported/Inventory_Slot.png-e6a68a40026f44e0b5e74c3806153355.ctex"
+uid="uid://cjsqulexaikkn"
+path="res://.godot/imported/Inventory_Background.png-d81eeb81e9550756fa28ca647ec05ac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/assets/Inventory_Slot.png"
-dest_files=["res://.godot/imported/Inventory_Slot.png-e6a68a40026f44e0b5e74c3806153355.ctex"]
+source_file="res://ui/inventory/assets/Inventory_Background.png"
+dest_files=["res://.godot/imported/Inventory_Background.png-d81eeb81e9550756fa28ca647ec05ac1.ctex"]
 
 [params]
 

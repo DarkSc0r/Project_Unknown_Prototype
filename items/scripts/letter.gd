@@ -2,12 +2,13 @@ extends Node2D
 
 @onready var letter_area_trigger := $Area2D
 
-var letter_ui := preload("res://ui/Letter_UI.tscn")
+# DEBUG
+var stone := preload("res://resources/items/stone.tres")
 
+var letter_ui := preload("res://ui/Letter_UI.tscn")
 var letter_instance_exists := false
 
 var player_in_area := false
-
 func _ready() -> void:
 	letter_area_trigger.body_entered.connect(_on_area_2d_body_entered)
 	letter_area_trigger.body_exited.connect(_on_area_2d_body_exited)

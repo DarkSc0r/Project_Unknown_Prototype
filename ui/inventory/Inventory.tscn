@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://do0bfwimix18f"]
+
+[ext_resource type="Script" uid="uid://csngyi4ejk2ad" path="res://ui/inventory/scripts/inventory_ui.gd" id="1_2k1b4"]
+[ext_resource type="Texture2D" uid="uid://cjsqulexaikkn" path="res://ui/inventory/assets/Inventory_Background.png" id="1_t68fq"]
+[ext_resource type="PackedScene" uid="uid://41pa62v3tu40" path="res://ui/inventory/InventorySlot.tscn" id="2_f2wft"]
+
+[node name="Inventory" type="CanvasLayer" unique_id=2147357989]
+script = ExtResource("1_2k1b4")
+
+[node name="InventoryBackground" type="NinePatchRect" parent="." unique_id=140155745]
+custom_minimum_size = Vector2(558, 600)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -573.0
+offset_top = -300.0
+offset_right = -15.0
+offset_bottom = 300.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("1_t68fq")
+
+[node name="SlotsMargin" type="MarginContainer" parent="InventoryBackground" unique_id=128680045]
+custom_minimum_size = Vector2(558, 298)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -298.0
+offset_right = 279.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 23
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 23
+
+[node name="SlotsGrid" type="GridContainer" parent="InventoryBackground/SlotsMargin" unique_id=2086221066]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 18
+columns = 8
+
+[node name="InventorySlot" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1007002562 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=991388748 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=218108194 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1436402968 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=2062847621 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=305969287 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=613782768 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1980698610 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1913423759 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=356844582 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1717195697 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=943914506 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1045327214 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=2052960297 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=81055463 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=926233433 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=2064116392 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=822717639 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1219635705 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1589728248 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=605229836 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=117798727 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=992773579 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1264273203 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot25" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=2097786641 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot26" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=933474308 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot27" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=2131405562 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot28" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=519469028 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot29" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=445019817 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot30" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=963219948 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot31" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=266301952 instance=ExtResource("2_f2wft")]
+layout_mode = 2
+
+[node name="InventorySlot32" parent="InventoryBackground/SlotsMargin/SlotsGrid" unique_id=1860331572 instance=ExtResource("2_f2wft")]
+layout_mode = 2

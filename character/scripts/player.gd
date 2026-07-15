@@ -3,6 +3,11 @@ extends CharacterBody2D
 # Exports
 @export var speed := 75
 @export var animation_tree : AnimationTree
+@export var player_inventory : Inventory
+
+# Inventory
+@onready var inventory_scene := $Inventory
+var is_inventory_open : bool
 
 # Movement
 var input
@@ -34,9 +39,13 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	# Movement
-	input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = input * speed
-	move_and_slide()
+	is_inventory_open = inventory_scene.is_open
+	if is_inventory_open == false:
+		input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		velocity = input * speed
+		move_and_slide()
+	else:
+		velocity = Vector2.ZERO
 	select_animation()
 	update_animation_parameters()
 	
@@ -50,9 +59,8 @@ func _physics_process(delta: float) -> void:
 	elif GameData.player_in_bunker == true and GameData.infection_value != 0.0:
 		decrease_infection(delta)
 
-
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("pause"): # and is_inventory_open == false:
+	if Input.is_action_just_pressed("pause") and is_inventory_open == false:
 		if pause_menu_exists == false:
 			pause_menu_instance = pause_menu.instantiate()
 			get_tree().root.add_child(pause_menu_instance)
@@ -101,3 +109,14 @@ func update_animation_parameters():
 
 	animation_tree["parameters/Idle/blend_position"] = input
 	animation_tree["parameters/Walk/blend_position"] = input
+
+func collect(item):
+	player_inventory.insert(item)
+
+	# DEBUG
+	# For items that need collected.
+	# When this item is in the world.
+	# In the function that we call to remove the item
+	# We get a reference to the player.
+	# Then run player.collect(item)
+	# With the item we are collecting(self)

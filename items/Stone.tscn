@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://go0hye6grsgq"]
+
+[ext_resource type="Texture2D" uid="uid://psxpyf74c5q7" path="res://items/assets/stone.png" id="1_6xb3o"]
+[ext_resource type="Script" uid="uid://2apoh20vbqie" path="res://items/scripts/stone.gd" id="1_nghxk"]
+[ext_resource type="Resource" uid="uid://b1g03deirr2r4" path="res://resources/items/stone.tres" id="2_ksorg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kubub"]
+radius = 13.038404
+
+[node name="Stone" type="Node2D" unique_id=1330665533]
+script = ExtResource("1_nghxk")
+stone = ExtResource("2_ksorg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=268284464]
+texture = ExtResource("1_6xb3o")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=620429584]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1644015486]
+shape = SubResource("CircleShape2D_kubub")

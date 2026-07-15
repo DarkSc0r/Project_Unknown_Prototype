@@ -6,6 +6,9 @@ extends Node2D
 var player_preload := preload("res://character/Player.tscn")
 var letter_preload := preload("res://items/Letter.tscn")
 
+# DEBUG
+var stone_preload := preload("res://items/Stone.tscn")
+
 var player_in_area := false
 
 func _ready() -> void:
@@ -17,6 +20,11 @@ func _ready() -> void:
 		true:
 			player_instance.position = bunker_tilemap.map_to_local(Vector2i(-1, -1))
 	
+	# DEBUG
+	var stone_instance := stone_preload.instantiate()
+	add_child(stone_instance)
+	stone_instance.position = bunker_tilemap.map_to_local(Vector2i(2, -2))
+
 	var letter_instance := letter_preload.instantiate()
 	add_child(letter_instance)
 	letter_instance.position = bunker_tilemap.map_to_local(Vector2i(-2, -9))
