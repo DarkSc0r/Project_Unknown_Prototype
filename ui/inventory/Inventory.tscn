@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://41pa62v3tu40" path="res://ui/inventory/InventorySlot.tscn" id="2_f2wft"]
 
 [node name="Inventory" type="CanvasLayer" unique_id=2147357989]
+process_mode = 3
+layer = 2
 script = ExtResource("1_2k1b4")
 
 [node name="InventoryBackground" type="NinePatchRect" parent="." unique_id=140155745]
@@ -35,6 +37,7 @@ offset_top = -298.0
 offset_right = 279.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme_override_constants/margin_left = 23
 theme_override_constants/margin_top = 23
 theme_override_constants/margin_right = 7
@@ -42,6 +45,7 @@ theme_override_constants/margin_bottom = 23
 
 [node name="SlotsGrid" type="GridContainer" parent="InventoryBackground/SlotsMargin" unique_id=2086221066]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 18
 columns = 8

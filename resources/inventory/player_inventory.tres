@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bq06bwsumo4iy" path="res://ui/inventory/scripts/inventory_slots.gd" id="2_1qrra"]
 [ext_resource type="Script" uid="uid://bygo83jeth6va" path="res://ui/inventory/scripts/inventory.gd" id="3_nffn3"]
+[ext_resource type="Resource" uid="uid://b1g03deirr2r4" path="res://resources/items/stone.tres" id="3_ny04u"]
 
 [sub_resource type="Resource" id="Resource_1qrra"]
 script = ExtResource("2_1qrra")
@@ -37,6 +38,8 @@ metadata/_custom_type_script = "uid://bq06bwsumo4iy"
 
 [sub_resource type="Resource" id="Resource_6dt82"]
 script = ExtResource("2_1qrra")
+item = ExtResource("3_ny04u")
+item_quantity = 12
 metadata/_custom_type_script = "uid://bq06bwsumo4iy"
 
 [sub_resource type="Resource" id="Resource_mcr2g"]
@@ -49,6 +52,8 @@ metadata/_custom_type_script = "uid://bq06bwsumo4iy"
 
 [sub_resource type="Resource" id="Resource_w7i0a"]
 script = ExtResource("2_1qrra")
+item = ExtResource("3_ny04u")
+item_quantity = 5
 metadata/_custom_type_script = "uid://bq06bwsumo4iy"
 
 [sub_resource type="Resource" id="Resource_gp5pg"]

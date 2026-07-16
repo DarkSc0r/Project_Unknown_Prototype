@@ -1,4 +1,5 @@
 Control
+TextureRect
 Container
 Label
 Sprite2D
@@ -11,4 +12,3 @@ Panel
 CollisionShape2D
 Area2D
 Button
-ProgressBar

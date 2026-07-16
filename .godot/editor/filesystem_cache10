@@ -1,12 +1,12 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1784149677
+::res://::1784231409
 export_presets.cfg::TextFile::-1::1783062861::0::1::::<><><>0<>0<><>::
 ::res://builds/::1783062861
-::res://character/::1784152810
-Player.tscn::PackedScene::2089379888947356675::1784152810::0::1::::<><><>0<>0<><>::uid://brdntdnpbnrme::::res://character/scripts/player.gd<>uid://d3v3krn3w84xa::::res://character/Small-8-Direction-Characters_by_AxulArt.png<>uid://bygo83jeth6va::::res://ui/inventory/scripts/inventory.gd<>uid://bq06bwsumo4iy::::res://ui/inventory/scripts/inventory_slots.gd<>uid://do0bfwimix18f::::res://ui/inventory/Inventory.tscn
+::res://character/::1784154169
+Player.tscn::PackedScene::2089379888947356675::1784154169::0::1::::<><><>0<>0<><>::uid://brdntdnpbnrme::::res://character/scripts/player.gd<>uid://bhmsa2ufmfikr::::res://resources/inventory/player_inventory.tres<>uid://d3v3krn3w84xa::::res://character/Small-8-Direction-Characters_by_AxulArt.png<>uid://do0bfwimix18f::::res://ui/inventory/Inventory.tscn
 Small-8-Direction-Characters_by_AxulArt.png::CompressedTexture2D::9169620453798307626::1784073568::1784084864::1::::<><><>0<>0<>866af76cef96d0148880a1f76b6bc9db<>res://.godot/imported/Small-8-Direction-Characters_by_AxulArt.png-331e75e35e25393996852e8a2a23af9a.ctex::
 ::res://character/scripts/::1782694541
-player.gd::GDScript::3586647588127894520::1784151727::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::3586647588127894520::1784154606::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://fonts/::1783056059
 ::res://fonts/Share Tech Mono/::1783056068
 OFL.txt::TextFile::-1::1783056068::0::1::::<><><>0<>0<><>::
@@ -18,20 +18,20 @@ cursor.png::CompressedTexture2D::8393396523778733138::1784087961::1784088022::1:
 ::res://items/::1784152566
 Letter.tscn::PackedScene::5036251710190828290::1783058843::0::1::::<><><>0<>0<><>::uid://bpb1uhsre0rcj::::res://world/tiles/letter.png<>uid://b2urf5cv7gqla::::res://items/scripts/letter.gd
 Stone.tscn::PackedScene::451566043918353516::1784152566::0::1::::<><><>0<>0<><>::uid://psxpyf74c5q7::::res://items/assets/stone.png<>uid://2apoh20vbqie::::res://items/scripts/stone.gd<>uid://b1g03deirr2r4::::res://resources/items/stone.tres
-::res://items/assets/::1784150039
+::res://items/assets/::1784153029
 stone.png::CompressedTexture2D::1091416001662990552::1784153028::1784153029::1::::<><><>0<>0<>3bfd1b40557a0886c219bd1c13ffbed9<>res://.godot/imported/stone.png-c5b22a3074d65602efc2788ca35cf8c7.ctex::
 ::res://items/icons/::1783279354
 stone_icon.png::CompressedTexture2D::2196563084533306767::1783279344::1783279354::1::::<><><>0<>0<>75667780cb9571937af3811f139ef882<>res://.godot/imported/stone_icon.png-3dfab256e679f399617db5ca1763a9ed.ctex::
 ::res://items/scripts/::1784152423
 letter.gd::GDScript::4323849714634999814::1784152382::0::1::::<>Node2D<><>0<>0<><>::
-stone.gd::GDScript::1896034944770216844::1784152643::0::1::::<>Node2D<><>0<>0<><>::
+stone.gd::GDScript::1896034944770216844::1784154220::0::1::::<>Node2D<><>0<>0<><>::
 ::res://main/::1784089432
 Main.tscn::PackedScene::8981837860972588318::1784089432::0::1::::<><><>0<>0<><>::uid://dnwb54i1amqwx::::res://main/scripts/main.gd<>uid://cypg7jui2jnf2::::res://world/scripts/chunk_manager.gd<>uid://bel13a6v7ggq7::::res://resources/tilemaps/main_game_tilemap.tres
 ::res://main/scripts/::1783203341
 main.gd::GDScript::8117249156490354019::1782890882::0::1::::<>Node2D<><>0<>0<><>::
 ::res://resources/::1784148979
-::res://resources/inventory/::1784151981
-player_inventory.tres::Resource/Inventory::2903609477347802893::1784151981::0::1::::<><><>0<>0<><>::uid://bq06bwsumo4iy::::res://ui/inventory/scripts/inventory_slots.gd<>uid://bygo83jeth6va::::res://ui/inventory/scripts/inventory.gd
+::res://resources/inventory/::1784154163
+player_inventory.tres::Resource/Inventory::2903609477347802893::1784154163::0::1::::<><><>0<>0<><>::uid://bq06bwsumo4iy::::res://ui/inventory/scripts/inventory_slots.gd<>uid://bygo83jeth6va::::res://ui/inventory/scripts/inventory.gd
 ::res://resources/items/::1784148995
 stone.tres::Resource/InventoryItem::4225284975990969571::1784148995::0::1::::<><><>0<>0<><>::uid://iaa1ywmj2gvc::::res://ui/inventory/scripts/inventory_item.gd<>uid://psxpyf74c5q7::::res://items/assets/stone.png
 ::res://resources/tilemaps/::1784148891
@@ -48,18 +48,18 @@ Letter_UI.tscn::PackedScene::8987497055271776631::1783058496::0::1::::<><><>0<>0
 Main_Menu.tscn::PackedScene::2829755193080683615::1783222930::0::1::::<><><>0<>0<><>::uid://dlcdou3vj1xmf::::res://ui/scripts/main_menu.gd<>uid://cn33xiy3fvcrc::::res://ui/scripts/new_game.gd<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
 Options_Panel.tscn::PackedScene::9053452648867470485::1782695092::0::1::::<><><>0<>0<><>::uid://dxdq71rj1jsyt::::res://ui/scripts/options.gd
 Pause_Menu.tscn::PackedScene::8849341199199371395::1782783331::0::1::::<><><>0<>0<><>::uid://cimiqrsjgoisu::::res://ui/scripts/pause_menu.gd<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
-::res://ui/inventory/::1784151145
+::res://ui/inventory/::1784154261
 Inventory.tscn::PackedScene::8193586120254531335::1784151145::0::1::::<><><>0<>0<><>::uid://csngyi4ejk2ad::::res://ui/inventory/scripts/inventory_ui.gd<>uid://cjsqulexaikkn::::res://ui/inventory/assets/Inventory_Background.png<>uid://41pa62v3tu40::::res://ui/inventory/InventorySlot.tscn
-InventorySlot.tscn::PackedScene::2090062712925896187::1784150900::0::1::::<><><>0<>0<><>::uid://c13ioetot657f::::res://ui/inventory/assets/Inventory_Slot.png<>uid://cr8bh1qd4rf0t::::res://ui/inventory/scripts/inventory_slot.gd<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf
+InventorySlot.tscn::PackedScene::2090062712925896187::1784154261::0::1::::<><><>0<>0<><>::uid://c13ioetot657f::::res://ui/inventory/assets/Inventory_Slot.png<>uid://cr8bh1qd4rf0t::::res://ui/inventory/scripts/inventory_slot.gd<>uid://psxpyf74c5q7::::res://items/assets/stone.png<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf
 ::res://ui/inventory/assets/::1784150140
 Inventory_Background.png::CompressedTexture2D::5442707532445341225::1784150128::1784150140::1::::<><><>0<>0<>db5fe304082c0829bb4b3f0835c6a49f<>res://.godot/imported/Inventory_Background.png-d81eeb81e9550756fa28ca647ec05ac1.ctex::
 Inventory_Slot.png::CompressedTexture2D::6656064856252943077::1784150137::1784149677::1::::<><><>0<>0<>b6abbd807874ed61240035ee0bba8440<>res://.godot/imported/Inventory_Slot.png-ea998cbc94670a9c194a6302fa60dc4c.ctex::
-::res://ui/inventory/scripts/::1784152355
-inventory.gd::GDScript::4084249651392316526::1784152791::0::1::::Inventory<>Resource<><>0<>0<><>::
+::res://ui/inventory/scripts/::1784154129
+inventory.gd::GDScript::4084249651392316526::1784154218::0::1::::Inventory<>Resource<><>0<>0<><>::
 inventory_item.gd::GDScript::561558474850207948::1784151316::0::1::::InventoryItem<>Resource<><>0<>0<><>::
-inventory_ui.gd::GDScript::6063485089864200591::1784152319::0::1::::<>CanvasLayer<><>0<>0<><>::
-inventory_slot.gd::GDScript::6034250783166535217::1784152892::0::1::::<>Control<><>0<>0<><>::
+inventory_slot.gd::GDScript::6034250783166535217::1784154663::0::1::::<>Control<><>0<>0<><>::
 inventory_slots.gd::GDScript::3562936822568290124::1784152077::0::1::::InventorySlot<>Resource<><>0<>0<><>::
+inventory_ui.gd::GDScript::6063485089864200591::1784154218::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://ui/scripts/::1784089374
 death_screen.gd::GDScript::3424413964152124458::1783203623::0::1::::<>CanvasLayer<><>0<>0<><>::
 hud.gd::GDScript::7447239838372459037::1783271347::0::1::::<>CanvasLayer<><>0<>0<><>::

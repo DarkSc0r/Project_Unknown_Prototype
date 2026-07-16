@@ -7,6 +7,11 @@ var is_open := false
 
 func _ready() -> void:
 	player_inventory.update.connect(update_slots)
+
+	for i in range(inventory_slots.size()):
+		inventory_slots[i].slot_index = i
+		inventory_slots[i].player_inventory = player_inventory
+	
 	update_slots()
 
 func _process(_delta: float) -> void:

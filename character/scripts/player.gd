@@ -112,7 +112,6 @@ func update_animation_parameters():
 
 func collect(item):
 	player_inventory.insert(item)
-
 	# DEBUG
 	# For items that need collected.
 	# When this item is in the world.

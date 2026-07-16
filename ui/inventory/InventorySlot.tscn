@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://c13ioetot657f" path="res://ui/inventory/assets/Inventory_Slot.png" id="1_8lvgp"]
 [ext_resource type="Script" uid="uid://cr8bh1qd4rf0t" path="res://ui/inventory/scripts/inventory_slot.gd" id="1_cuvg0"]
-[ext_resource type="Texture2D" uid="uid://psxpyf74c5q7" path="res://items/assets/stone.png" id="2_22ksf"]
 [ext_resource type="FontFile" uid="uid://dkkur8axjgqbd" path="res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf" id="2_jffjn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8lvgp"]
@@ -16,19 +15,25 @@ offset_right = 50.0
 offset_bottom = 50.0
 script = ExtResource("1_cuvg0")
 
-[node name="SlotBackground" type="Sprite2D" parent="." unique_id=857670104]
-position = Vector2(25, 25)
+[node name="SlotBackground" type="TextureRect" parent="." unique_id=1009049590]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_filter = 2
 texture = ExtResource("1_8lvgp")
 
-[node name="Item" type="Control" parent="." unique_id=1693187038]
+[node name="Item" type="Control" parent="." unique_id=608505882]
 anchors_preset = 0
 offset_right = 50.0
 offset_bottom = 50.0
+mouse_filter = 2
 
-[node name="ItemIcon" type="Sprite2D" parent="Item" unique_id=166679601]
-position = Vector2(25, 25)
-scale = Vector2(2.75, 2.75)
-texture = ExtResource("2_22ksf")
+[node name="ItemIcon" type="TextureRect" parent="Item" unique_id=1178358657]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_filter = 2
+stretch_mode = 5
 
 [node name="ItemQuantity" type="Label" parent="Item" unique_id=1629690417]
 layout_mode = 0
