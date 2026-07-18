@@ -9,11 +9,11 @@ var flat_noise := FastNoiseLite.new()
 var flat_noise_scale := 0.1
 
 var biome_noise := FastNoiseLite.new()
-var biome_noise_scale := .01
+var biome_noise_scale := 0.02
 
 var height_noise := FastNoiseLite.new()
-var height_noise_scale := 0.06
-var height_layers := 0.0 # DEBUG
+var height_noise_scale := 0.03
+var height_layers := 4.0 # DEBUG
 
 var total_height_levels := height_layers + 1
 

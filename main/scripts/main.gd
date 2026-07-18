@@ -8,3 +8,4 @@ func _ready() -> void:
 	var player_instance := player.instantiate()
 	add_child(player_instance)
 	chunk_manager.set_player(player_instance)
+	# DEBUG
