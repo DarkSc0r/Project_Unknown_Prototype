@@ -5,6 +5,9 @@ extends CharacterBody2D
 @export var animation_tree : AnimationTree
 @export var player_inventory : Inventory
 
+# World
+@export var world_tilemap : TileMapLayer
+
 # Inventory
 @onready var inventory_scene := $Inventory
 var is_inventory_open : bool
@@ -49,7 +52,9 @@ func _physics_process(delta: float) -> void:
 	select_animation()
 	update_animation_parameters()
 	
-	# Infection
+
+
+	# Infection || DEBUG
 	if GameData.player_health <= 0.0 and death_screen_exists == false:
 		cause_death()
 	if GameData.player_health > 0.0 and GameData.infection_value == 100.0:

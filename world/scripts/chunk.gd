@@ -7,8 +7,8 @@ var chunk_coordinate : Vector2i
 const chunk_size := 32 # Tiles
 
 # Tile Dictionary	
-var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}
-var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0), "walkable": true}
+var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0)}
+var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0)}
 
 # Array of tiles
 var tiles := [stone_tile, dirt_tile]

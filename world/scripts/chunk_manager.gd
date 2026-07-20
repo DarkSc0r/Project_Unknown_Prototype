@@ -49,9 +49,9 @@ func _ready():
 		height_tilemap.tile_set = chunk_tilemap.tile_set
 		height_tilemap.position.y = (i + 1) * 16
 		height_tilemap.y_sort_enabled = true
-		add_child(height_tilemap)
+		add_child(height_tilemap)		
 		world_tilemap_layers.append(height_tilemap)
-	
+
 	# Bunker Hatch
 	var bunker_hatch_instance := bunker_hatch.instantiate()
 	add_child(bunker_hatch_instance)
@@ -72,7 +72,6 @@ func set_player(player_body : CharacterBody2D):
 	# Player Spawning
 	if GameData.player_in_bunker == false:
 		player.position = chunk_tilemap.map_to_local(Vector2i(0, 3))
-		
 
 # Gets the chunk coordinate of whatever you need
 func get_chunk_coordinate(world_position : Vector2):
