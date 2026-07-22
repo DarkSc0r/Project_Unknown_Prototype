@@ -11,9 +11,6 @@ func _ready() -> void:
 	player_instance = player.instantiate()
 	add_child(player_instance)
 	chunk_manager.set_player(player_instance)
-
-	# DEBUG
-	StructureManager.generate_structures(world_tilemap, Vector2i(1, 2))
 	
 func _process(_delta: float) -> void:
 	check_tile_under_player()
@@ -26,8 +23,6 @@ func check_tile_under_player():
 	if tile_under_player_data == null:
 		return "Tile does not exist."
 
-	var is_tile_under_player_spawnable = tile_under_player_data.get_custom_data("spawnable")
-
-
+	var _is_tile_under_player_spawnable = tile_under_player_data.get_custom_data("spawnable")
 
 # DEBUG ^^

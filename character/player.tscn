@@ -472,7 +472,7 @@ frame = 8
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=486246558]
 position = Vector2(0, 1)
-zoom = Vector2(3, 3)
+zoom = Vector2(2.75, 2.75)
 
 [node name="Inventory" parent="." unique_id=2147357989 instance=ExtResource("4_cq488")]
 visible = false

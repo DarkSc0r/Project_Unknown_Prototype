@@ -18,6 +18,7 @@ func initialize_game_data():
 		world_seed.text = str(randi())
 	GameData.world_seed = world_seed.text.hash()
 	GameData.difficulty = difficulty.get_item_text(difficulty.selected)
+	StructureManager.placed_structures = []
 	GameData.player_first_join = true
 	GameData.player_in_bunker = true
 	GameData.player_health = 100.0

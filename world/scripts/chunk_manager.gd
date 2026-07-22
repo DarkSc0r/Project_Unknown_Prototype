@@ -13,14 +13,14 @@ var biome_noise_scale := 0.02
 
 var height_noise := FastNoiseLite.new()
 var height_noise_scale := 0.03
-var height_layers := 4.0 # DEBUG
+var height_layers := 0.0
 
 var total_height_levels := height_layers + 1
 
 var world_tilemap_layers := []
 
 var loaded_chunks := {}
-var render_distance := 4
+var render_distance := 6
 
 var player_last_chunk_coordinate := Vector2i(999, 999)
 
@@ -57,8 +57,6 @@ func _ready():
 	add_child(bunker_hatch_instance)
 	bunker_hatch_instance.position = chunk_tilemap.map_to_local(Vector2i(1, 2))
 
-	GameData.bunker_hatch_position_in_world = chunk_tilemap.map_to_local(Vector2i(1, 2))
-
 func _process(_delta: float) -> void:
 	var player_current_chunk_coordinate = get_chunk_coordinate(player.position)
 	if player_current_chunk_coordinate != player_last_chunk_coordinate:
@@ -70,10 +68,18 @@ func set_player(player_body : CharacterBody2D):
 	
 	# Chunking
 	update_chunk()
+	print("Chunk generated.")
 
 	# Player Spawning
 	if GameData.player_in_bunker == false:
 		player.position = chunk_tilemap.map_to_local(Vector2i(0, 3))
+
+	StructureManager.generate_structures(chunk_tilemap, Vector2i(1, 2))
+
+	for chunks in loaded_chunks.values():
+		chunks.generate_chunks(world_tilemap_layers, flat_noise, biome_noise, height_noise, total_height_levels)
+
+	print("Chunks re-generated.")
 
 # Gets the chunk coordinate of whatever you need
 func get_chunk_coordinate(world_position : Vector2):

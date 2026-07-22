@@ -1,3 +1,6 @@
+CollisionShape2D
+Area2D
+TileMapLayer
 Control
 TextureRect
 Container
@@ -9,6 +12,3 @@ MarginContainer
 NinePatchRect
 CanvasLayer
 Panel
-CollisionShape2D
-Area2D
-Button

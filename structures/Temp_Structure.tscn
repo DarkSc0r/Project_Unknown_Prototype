@@ -1,0 +1,19 @@
+[gd_scene format=4 uid="uid://dlx8scf4bundw"]
+
+[ext_resource type="PackedScene" uid="uid://bvxw4fw8g2hhw" path="res://structures/Base_Structure.tscn" id="1_w8g8f"]
+[ext_resource type="TileSet" uid="uid://bel13a6v7ggq7" path="res://resources/tilemaps/main_game_tilemap.tres" id="2_t4uhy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1x1h"]
+radius = 27.018513
+
+[node name="BaseStructure" unique_id=2003802430 instance=ExtResource("1_w8g8f")]
+z_index = 1
+
+[node name="BaseStructureTilemap" parent="." index="0" unique_id=298132215]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD///7/AQAEAAMAAAAAAP7/AQADAAIAAAAAAAAAAQAEAAMAAAD//wAAAQAEAAMAAAD+/wEAAQADAAMAAAD//wEAAQADAAMAAAAAAAEAAQADAAMAAAAAAP//AQADAAMAAAD/////AQADAAMAAAD+////AQADAAMAAAD+//3/AQADAAMAAAD///3/AQADAAMAAAAAAP3/AQADAAMAAAA=")
+tile_set = ExtResource("2_t4uhy")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1209012770) index="0" unique_id=1784980381]
+position = Vector2(0, 25)
+shape = SubResource("CircleShape2D_l1x1h")

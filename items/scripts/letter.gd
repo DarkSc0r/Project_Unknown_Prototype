@@ -2,9 +2,6 @@ extends Node2D
 
 @onready var letter_area_trigger := $Area2D
 
-# DEBUG
-var stone := preload("res://resources/items/stone.tres")
-
 var letter_ui := preload("res://ui/Letter_UI.tscn")
 var letter_instance_exists := false
 

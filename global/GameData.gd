@@ -5,9 +5,9 @@ var title : String
 var world_seed : int
 var difficulty : String
 
-# Bunker Vars
-var bunker_hatch_position_in_world : Vector2
-# var chunk_tilemap : TileMapLayer
+# Structure Vars
+var structure_dictionary : Dictionary # DEBUG || For later date
+var structure_pool : Array # DEBUG || For later date
 
 # Player Vars
 var player_speed : float
