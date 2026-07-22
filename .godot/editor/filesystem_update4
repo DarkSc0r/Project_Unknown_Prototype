@@ -1,1 +1,10 @@
+res://global/StructureManager.gd
 res://main/scripts/main.gd
+res://main/Main.tscn
+res://resources/inventory/player_inventory.tres
+res://resources/tilemaps/main_game_tilemap.tres
+res://world/scripts/bunker.gd
+res://global/GameData.gd
+res://ui/scripts/new_game.gd
+res://ui/Main_Menu.tscn
+res://world/scripts/chunk_manager.gd

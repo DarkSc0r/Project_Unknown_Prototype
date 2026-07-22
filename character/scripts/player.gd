@@ -49,10 +49,9 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	else:
 		velocity = Vector2.ZERO
+		
 	select_animation()
 	update_animation_parameters()
-	
-
 
 	# Infection || DEBUG
 	if GameData.player_health <= 0.0 and death_screen_exists == false:

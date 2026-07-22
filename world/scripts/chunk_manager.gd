@@ -57,6 +57,8 @@ func _ready():
 	add_child(bunker_hatch_instance)
 	bunker_hatch_instance.position = chunk_tilemap.map_to_local(Vector2i(1, 2))
 
+	GameData.bunker_hatch_position_in_world = chunk_tilemap.map_to_local(Vector2i(1, 2))
+
 func _process(_delta: float) -> void:
 	var player_current_chunk_coordinate = get_chunk_coordinate(player.position)
 	if player_current_chunk_coordinate != player_last_chunk_coordinate:
