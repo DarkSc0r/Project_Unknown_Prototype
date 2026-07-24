@@ -30,13 +30,13 @@ func move_item(from_index: int, to_index: int) -> void:
 	var from_slot = slots[from_index]
 	var to_slot = slots[to_index]
 
-	if to_slot.item == null:
+	if to_slot.item == null: # Adding to a new slot
 		to_slot.item = from_slot.item
 		to_slot.item_quantity = from_slot.item_quantity
 
 		from_slot.item = null
 		from_slot.item_quantity = 0
-	elif to_slot.item == from_slot.item:
+	elif to_slot.item == from_slot.item: # Adding to an existing stack
 		# Total amount between the 2 items
 		var to_slot_total = to_slot.item_quantity + from_slot.item_quantity
 
@@ -54,7 +54,7 @@ func move_item(from_index: int, to_index: int) -> void:
 			# Removes the item from our other slot
 			from_slot.item = null
 			from_slot.item_quantity = 0
-	elif to_slot.item != from_slot.item and to_slot.item != null:
+	elif to_slot.item != from_slot.item and to_slot.item != null: # Adding to a slot with a different item
 		var temp_item = to_slot.item
 		var temp_quantity = to_slot.item_quantity
 

@@ -46,12 +46,13 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	else:
 		velocity = Vector2.ZERO
+		
 	select_animation()
 	update_animation_parameters()
-	
-	# Infection
+
+	# Infection || DEBUG
 	if GameData.player_health <= 0.0 and death_screen_exists == false:
-		cause_death()
+		cause_player_death()
 	if GameData.player_health > 0.0 and GameData.infection_value == 100.0:
 		cause_damage(delta)
 	if GameData.player_in_bunker == false and GameData.infection_value < 100.0 and GameData.player_health > 0.0:
@@ -68,7 +69,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 			get_tree().paused = true
 			pause_menu_exists = true
 
-func cause_death(): # DEBUG - Change name
+func cause_player_death():
 	death_screen_instance = death_screen.instantiate()
 	add_child(death_screen_instance)
 	get_tree().paused = true
@@ -78,14 +79,14 @@ func cause_death(): # DEBUG - Change name
 
 func decrease_infection(delta_time : float):
 	infection_decrease_accumulator += delta_time
-	if infection_decrease_accumulator >= 1.5:
+	if infection_decrease_accumulator >= 2.5:
 		GameData.infection_value -= 1
 		infection_decrease_accumulator = 0
 
 func increase_infection(delta_time : float):
 	infection_increase_accumulator += delta_time
 	if infection_increase_accumulator >= 1:
-		GameData.infection_value += 2
+		GameData.infection_value += 4
 		infection_increase_accumulator = 0
 
 func cause_damage(delta_time : float):

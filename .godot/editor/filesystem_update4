@@ -1,1 +1,12 @@
+res://structures/Base_Structure.tscn
+res://resources/inventory/player_inventory.tres
+res://resources/tilemaps/main_game_tilemap.tres
+res://structures/Temp_Structure.tscn
+res://global/GameData.gd
+res://world/scripts/chunk.gd
+res://world/scripts/chunk_manager.gd
+res://character/Player.tscn
+res://character/scripts/player.gd
+res://global/StructureManager.gd
+res://ui/scripts/new_game.gd
 res://main/scripts/main.gd

@@ -5,6 +5,10 @@ var title : String
 var world_seed : int
 var difficulty : String
 
+# Structure Vars
+var structure_dictionary : Dictionary # DEBUG || For later date
+var structure_pool : Array # DEBUG || For later date
+
 # Player Vars
 var player_speed : float
 var player_first_join : bool

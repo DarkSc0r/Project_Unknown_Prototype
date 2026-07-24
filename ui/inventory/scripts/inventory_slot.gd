@@ -32,7 +32,7 @@ func _get_drag_data(_at_position: Vector2):
 	var item_drag_data = {"base_index": slot_index}
 
 	var dragged_item = TextureRect.new()
-
+	
 	dragged_item.texture = slot.item.texture
 	dragged_item.size = Vector2(44, 44)
 	dragged_item.custom_minimum_size = Vector2(44, 44)
@@ -54,7 +54,6 @@ func _can_drop_data(_at_position: Vector2, _data) -> bool:
 	# in any slot. This is your future hook for restricted slots later
 	# (e.g. "only accept if data has an equip_type matching this slot").
 	return true
-
 
 func _drop_data(_at_position: Vector2, data) -> void:
 	var data_index = data["base_index"]

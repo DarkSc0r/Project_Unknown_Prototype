@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bvxw4fw8g2hhw"]
+
+[node name="BaseStructure" type="Node2D" unique_id=2003802430]
+
+[node name="BaseStructureTilemap" type="TileMapLayer" parent="." unique_id=298132215]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1209012770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1784980381]

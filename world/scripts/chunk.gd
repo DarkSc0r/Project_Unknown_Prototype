@@ -7,11 +7,14 @@ var chunk_coordinate : Vector2i
 const chunk_size := 32 # Tiles
 
 # Tile Dictionary	
-var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0), "walkable": true}
-var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0), "walkable": true}
+var dirt_tile := {"threshold": 1, "atlas": Vector2i(0, 0)}
+var stone_tile := {"threshold": 0.35, "atlas": Vector2i(1, 0)}
 
 # Array of tiles
 var tiles := [stone_tile, dirt_tile]
+
+# DEBUG
+var temp_structure := preload("res://structures/Temp_Structure.tscn")
 
 func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height : Noise, height_layers : float):
 	for x in chunk_size:
@@ -39,11 +42,14 @@ func generate_chunks(world_tilemap : Array, world : Noise, biome : Noise, height
 				if flat_noise_value <= tile["threshold"]:
 					atlas_coord	= tile["atlas"]
 					break
-			# if atlas_coord == stone_tile["atlas"]:
-			# 	if randf() < 0.10:
-			# 		var spawn_position = tilemap.map_to_local(world_offset)
-			# 		var stone_instance := stone.instantiate()
-			# 		add_child(stone_instance)
-			# 		stone_instance.position = spawn_position
+
+			# DEBUG
+			if StructureManager.placed_structures.has(world_offset) == true:
+				print("Match Found: ", world_offset)
+				var structure_spawn_position = tilemap.map_to_local(world_offset)
+				var temp_structure_instance := temp_structure.instantiate()
+				add_child(temp_structure_instance)
+				temp_structure_instance.position = structure_spawn_position
+
 
 			tilemap.set_cell(world_offset, 1, atlas_coord)

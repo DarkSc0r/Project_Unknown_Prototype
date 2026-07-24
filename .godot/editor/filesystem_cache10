@@ -1,18 +1,21 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1784341419
+::res://::1784688264
 export_presets.cfg::TextFile::-1::1784241322::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1784346686::0::1::::<><><>0<>0<><>::
 ::res://builds/::1784241321
 ::res://character/::1784238555
 Player.tscn::PackedScene::2089379888947356675::1784238555::0::1::::<><><>0<>0<><>::uid://brdntdnpbnrme::::res://character/scripts/player.gd<>uid://bhmsa2ufmfikr::::res://resources/inventory/player_inventory.tres<>uid://d3v3krn3w84xa::::res://character/Small-8-Direction-Characters_by_AxulArt.png<>uid://do0bfwimix18f::::res://ui/inventory/Inventory.tscn
 Small-8-Direction-Characters_by_AxulArt.png::CompressedTexture2D::9169620453798307626::1784073568::1784084864::1::::<><><>0<>0<>866af76cef96d0148880a1f76b6bc9db<>res://.godot/imported/Small-8-Direction-Characters_by_AxulArt.png-331e75e35e25393996852e8a2a23af9a.ctex::
 ::res://character/scripts/::1782694541
-player.gd::GDScript::3586647588127894520::1784237465::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::3586647588127894520::1784687163::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://fonts/::1783056059
 ::res://fonts/Share Tech Mono/::1783056068
 OFL.txt::TextFile::-1::1783056068::0::1::::<><><>0<>0<><>::
 ShareTechMono-Regular.ttf::FontFile::7883040697679788165::1783056068::1783056068::1::::<><><>0<>0<>85872197ed8846b08cbfe8085b6868cb<>res://.godot/imported/ShareTechMono-Regular.ttf-bae377e0aa64d1e2619f82edfd55875e.fontdata::
-::res://global/::1784089432
-GameData.gd::GDScript::3865233575367333530::1784089432::0::1::::<>Node<><>0<>0<><>::
+::res://global/::1784688186
+GameData.gd::GDScript::3865233575367333530::1784682894::0::1::::<>Node<><>0<>0<><>::
+GameTileData.gd::GDScript::4755926474684539903::1784588085::0::1::::<>Node<><>0<>0<><>::
+StructureManager.gd::GDScript::8165808391534958514::1784688186::0::1::::<>Node<><>0<>0<><>::
 ::res://icons/::1784088022
 cursor.png::CompressedTexture2D::8393396523778733138::1784087961::1784088022::1::::<><><>0<>0<>1155d292952e73eccb0db3d9e1282799<>res://.godot/imported/cursor.png-61f7b540f046003a36145a36dd6ceaa7.ctex::
 ::res://items/::1784152566
@@ -23,29 +26,31 @@ stone.png::CompressedTexture2D::1091416001662990552::1784153028::1784153029::1::
 ::res://items/icons/::1783279354
 stone_icon.png::CompressedTexture2D::2196563084533306767::1783279344::1783279354::1::::<><><>0<>0<>75667780cb9571937af3811f139ef882<>res://.godot/imported/stone_icon.png-3dfab256e679f399617db5ca1763a9ed.ctex::
 ::res://items/scripts/::1784152423
-letter.gd::GDScript::4323849714634999814::1784152382::0::1::::<>Node2D<><>0<>0<><>::
-stone.gd::GDScript::1896034944770216844::1784154220::0::1::::<>Node2D<><>0<>0<><>::
-::res://main/::1784089432
-Main.tscn::PackedScene::8981837860972588318::1784089432::0::1::::<><><>0<>0<><>::uid://dnwb54i1amqwx::::res://main/scripts/main.gd<>uid://cypg7jui2jnf2::::res://world/scripts/chunk_manager.gd<>uid://bel13a6v7ggq7::::res://resources/tilemaps/main_game_tilemap.tres
-::res://main/scripts/::1783203341
-main.gd::GDScript::8117249156490354019::1782890882::0::1::::<>Node2D<><>0<>0<><>::
+letter.gd::GDScript::4323849714634999814::1784687180::0::1::::<>Node2D<><>0<>0<><>::
+stone.gd::GDScript::1896034944770216844::1784687208::0::1::::<>Node2D<><>0<>0<><>::
+::res://main/::1784681667
+Main.tscn::PackedScene::8981837860972588318::1784681667::0::1::::<><><>0<>0<><>::uid://dnwb54i1amqwx::::res://main/scripts/main.gd<>uid://cypg7jui2jnf2::::res://world/scripts/chunk_manager.gd<>uid://bel13a6v7ggq7::::res://resources/tilemaps/main_game_tilemap.tres
+::res://main/scripts/::1784588121
+main.gd::GDScript::8117249156490354019::1784687212::0::1::::<>Node2D<><>0<>0<><>::
 ::res://resources/::1784148979
-::res://resources/inventory/::1784238555
-player_inventory.tres::Resource/Inventory::2903609477347802893::1784238555::0::1::::<><><>0<>0<><>::uid://bq06bwsumo4iy::::res://ui/inventory/scripts/inventory_slots.gd<>uid://bygo83jeth6va::::res://ui/inventory/scripts/inventory.gd<>uid://b1g03deirr2r4::::res://resources/items/stone.tres
+::res://resources/inventory/::1784681204
+player_inventory.tres::Resource/Inventory::2903609477347802893::1784681204::0::1::::<><><>0<>0<><>::uid://bq06bwsumo4iy::::res://ui/inventory/scripts/inventory_slots.gd<>uid://bygo83jeth6va::::res://ui/inventory/scripts/inventory.gd<>uid://b1g03deirr2r4::::res://resources/items/stone.tres
 ::res://resources/items/::1784235957
 stone.tres::Resource/InventoryItem::4225284975990969571::1784235957::0::1::::<><><>0<>0<><>::uid://iaa1ywmj2gvc::::res://ui/inventory/scripts/inventory_item.gd<>uid://psxpyf74c5q7::::res://items/assets/stone.png
-::res://resources/tilemaps/::1784235957
-main_game_tilemap.tres::TileSet::2691512906467240168::1784235957::0::1::::<><><>0<>0<><>::uid://dmbacbf1ktopy::::res://world/tiles/WorldSpriteSheet.png
+::res://resources/tilemaps/::1784681204
+main_game_tilemap.tres::TileSet::2691512906467240168::1784681204::0::1::::<><><>0<>0<><>::uid://dmbacbf1ktopy::::res://world/tiles/WorldSpriteSheet.png
 ::res://screenshots/::1783033285
 Bunker_Pausemenu_screenshot.png::CompressedTexture2D::186717082130375697::1783033283::1783033285::1::::<><><>0<>0<>1de431edc9fa843bd0fa017a3282cd28<>res://.godot/imported/Bunker_Pausemenu_screenshot.png-3efb2beb1110a3d23bd2fde521540b8e.ctex::
 bunker_screenshot.png::CompressedTexture2D::3122813633153955347::1783032400::1783032474::1::::<><><>0<>0<>834943c02deff21d99bb022e17ba0b08<>res://.godot/imported/bunker_screenshot.png-435417c04e796a5bc98cafce9793f86b.ctex::
 deathscreen_screenshot.png::CompressedTexture2D::8413925989933718366::1783032410::1783032474::1::::<><><>0<>0<>23143e71571f16587d1d7968f1905049<>res://.godot/imported/deathscreen_screenshot.png-d43ad975fe53bd8c378b8c5b687e3385.ctex::
 Project Unknown Icon.png::CompressedTexture2D::231764585234854388::1783033228::1783033260::1::::<><><>0<>0<>7c31943990f5b37291fa6391c9013693<>res://.godot/imported/Project Unknown Icon.png-aead7e585141c9b1e426f04df413e550.ctex::
-::res://ui/::1784149677
+::res://structures/::1784688220
+Base_Structure.tscn::PackedScene::3909254948410164600::1784688220::0::1::::<><><>0<>0<><>::
+::res://ui/::1784682637
 Death_Screen.tscn::PackedScene::4311502104022677066::1783032302::0::1::::<><><>0<>0<><>::uid://bo12uk6csv5de::::res://ui/scripts/death_screen.gd
 Hud.tscn::PackedScene::925790399981951099::1783271944::0::1::::<><><>0<>0<><>::uid://dedq7muwkka8l::::res://ui/scripts/hud.gd<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf
 Letter_UI.tscn::PackedScene::8987497055271776631::1783058496::0::1::::<><><>0<>0<><>::uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf<>uid://cklrjkye0cpko::::res://ui/scripts/letter_ui.gd
-Main_Menu.tscn::PackedScene::2829755193080683615::1783222930::0::1::::<><><>0<>0<><>::uid://dlcdou3vj1xmf::::res://ui/scripts/main_menu.gd<>uid://cn33xiy3fvcrc::::res://ui/scripts/new_game.gd<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
+Main_Menu.tscn::PackedScene::2829755193080683615::1784682637::0::1::::<><><>0<>0<><>::uid://dlcdou3vj1xmf::::res://ui/scripts/main_menu.gd<>uid://cn33xiy3fvcrc::::res://ui/scripts/new_game.gd<>uid://dkkur8axjgqbd::::res://fonts/Share Tech Mono/ShareTechMono-Regular.ttf<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
 Options_Panel.tscn::PackedScene::9053452648867470485::1782695092::0::1::::<><><>0<>0<><>::uid://dxdq71rj1jsyt::::res://ui/scripts/options.gd
 Pause_Menu.tscn::PackedScene::8849341199199371395::1782783331::0::1::::<><><>0<>0<><>::uid://cimiqrsjgoisu::::res://ui/scripts/pause_menu.gd<>uid://d18tbpar2d2nh::::res://ui/Options_Panel.tscn
 ::res://ui/inventory/::1784239456
@@ -55,9 +60,9 @@ InventorySlot.tscn::PackedScene::2090062712925896187::1784239456::0::1::::<><><>
 Inventory_Background.png::CompressedTexture2D::5442707532445341225::1784150128::1784150140::1::::<><><>0<>0<>db5fe304082c0829bb4b3f0835c6a49f<>res://.godot/imported/Inventory_Background.png-d81eeb81e9550756fa28ca647ec05ac1.ctex::
 Inventory_Slot.png::CompressedTexture2D::6656064856252943077::1784150137::1784149677::1::::<><><>0<>0<>b6abbd807874ed61240035ee0bba8440<>res://.godot/imported/Inventory_Slot.png-ea998cbc94670a9c194a6302fa60dc4c.ctex::
 ::res://ui/inventory/scripts/::1784237787
-inventory.gd::GDScript::4084249651392316526::1784235939::0::1::::Inventory<>Resource<><>0<>0<><>::
+inventory.gd::GDScript::4084249651392316526::1784521372::0::1::::Inventory<>Resource<><>0<>0<><>::
 inventory_item.gd::GDScript::561558474850207948::1784234732::0::1::::InventoryItem<>Resource<><>0<>0<><>::
-inventory_slot.gd::GDScript::6034250783166535217::1784239958::0::1::::<>Control<><>0<>0<><>::
+inventory_slot.gd::GDScript::6034250783166535217::1784521871::0::1::::<>Control<><>0<>0<><>::
 inventory_slots.gd::GDScript::3562936822568290124::1784152077::0::1::::InventorySlot<>Resource<><>0<>0<><>::
 inventory_ui.gd::GDScript::6063485089864200591::1784238871::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://ui/scripts/::1784089374
@@ -65,7 +70,7 @@ death_screen.gd::GDScript::3424413964152124458::1783203623::0::1::::<>CanvasLaye
 hud.gd::GDScript::7447239838372459037::1783271347::0::1::::<>CanvasLayer<><>0<>0<><>::
 letter_ui.gd::GDScript::5498486782607411262::1783058889::0::1::::<>CanvasLayer<><>0<>0<><>::
 main_menu.gd::GDScript::7935676333387493241::1783061372::0::1::::<>Control<><>0<>0<><>::
-new_game.gd::GDScript::5744840519393379396::1784089399::0::1::::<>Control<><>0<>0<><>::
+new_game.gd::GDScript::5744840519393379396::1784682829::0::1::::<>Control<><>0<>0<><>::
 options.gd::GDScript::8780828597618265171::1782669810::0::1::::<>Control<><>0<>0<><>::
 pause_menu.gd::GDScript::5359639879304717448::1783020846::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://world/::1783225360
@@ -73,11 +78,13 @@ Bunker.tscn::PackedScene::1717145881082015325::1783225360::0::1::::<><><>0<>0<><
 Bunker_Hatch.tscn::PackedScene::3067164493833440387::1783020750::0::1::::<><><>0<>0<><>::uid://d0k8e4b3qjukb::::res://world/scripts/bunker_hatch.gd<>uid://cths75vou1kpf::::res://world/tiles/Bunker_hatch.png
 Chunk.tscn::PackedScene::2814122224843493081::1783203774::0::1::::<><><>0<>0<><>::uid://bq5gce1v0n8t7::::res://world/scripts/chunk.gd<>uid://bel13a6v7ggq7::::res://resources/tilemaps/main_game_tilemap.tres
 ::res://world/scripts/::1783058825
-bunker.gd::GDScript::6633371256318323143::1784152733::0::1::::<>Node2D<><>0<>0<><>::
+bunker.gd::GDScript::6633371256318323143::1784681417::0::1::::<>Node2D<><>0<>0<><>::
 bunker_hatch.gd::GDScript::8936639249523532461::1782971961::0::1::::<>Node2D<><>0<>0<><>::
-chunk.gd::GDScript::3571741639314238530::1784309216::0::1::::Chunk<>Node2D<><>0<>0<><>::
-chunk_manager.gd::GDScript::6488761232377604465::1784309271::0::1::::<>Node<><>0<>0<><>::
-::res://world/tiles/::1783058818
+chunk.gd::GDScript::3571741639314238530::1784522326::0::1::::Chunk<>Node2D<><>0<>0<><>::
+chunk_manager.gd::GDScript::6488761232377604465::1784687232::0::1::::<>Node<><>0<>0<><>::
+::res://world/tiles/::1784688113
 Bunker_hatch.png::CompressedTexture2D::6122031700867242555::1782787640::1782787645::1::::<><><>0<>0<>adc4845ac7c4d249383da2bf8a846e9d<>res://.godot/imported/Bunker_hatch.png-38bfcbf9ed747334f81483bccff5e962.ctex::
+concept_structure_generation.png::CompressedTexture2D::6866694473453715148::1784608589::1784608883::1::::<><><>0<>0<>fb2b8e7c52c2f8e5d8889b5282495b10<>res://.godot/imported/concept_structure_generation.png-5050dec51628ae3c922d047c3a24429a.ctex::
 letter.png::CompressedTexture2D::3442932469956352953::1783055350::1783058818::1::::<><><>0<>0<>4112091ee487115824a758ed011e2394<>res://.godot/imported/letter.png-92411b5f89f0bea560eb125a0d561c7a.ctex::
-WorldSpriteSheet.png::CompressedTexture2D::8003596185520381446::1783055350::1783058818::1::::<><><>0<>0<>ec8f6369660ba1abddec53ca8bb8c540<>res://.godot/imported/WorldSpriteSheet.png-1944f378ec2ef5c13e40fdb0503ac922.ctex::
+temp_structure_tilemap.png::CompressedTexture2D::5965016584068393931::1784688104::1784688113::1::::<><><>0<>0<>b8314946d2a3834dc7edbdae22af4777<>res://.godot/imported/temp_structure_tilemap.png-02e39fc1d91295b970aab8235edf6ee0.ctex::
+WorldSpriteSheet.png::CompressedTexture2D::8003596185520381446::1784688085::1783058818::1::::<><><>0<>0<>ec8f6369660ba1abddec53ca8bb8c540<>res://.godot/imported/WorldSpriteSheet.png-1944f378ec2ef5c13e40fdb0503ac922.ctex::
